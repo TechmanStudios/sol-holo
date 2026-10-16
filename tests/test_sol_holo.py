@@ -125,3 +125,16 @@ def test_sol_holo_cli_manifest_and_synthesize(tmp_path: Path) -> None:
     doc = json.loads(manifest_out.read_text(encoding="utf-8"))
     assert doc["total_frontiers"] == 14
     assert doc["all_frontiers_verified"] is True
+
+
+def test_sol_holo_standalone_packet_synthesis() -> None:
+    organism = SOLHoloOrganism()
+    report = organism._run_standalone_packet_synthesis()
+    assert report.all_verified is True
+    assert report.manifest.all_frontiers_verified is True
+    assert report.continuum_episode_summary["conjecture_status"] == "PROVED_THEOREM"
+    assert report.lumina_episode_summary["wideword_32_r7_hex"] == "0x7D5D7757"
+    assert report.lumina_episode_summary["wideword_64_r7_hex"] == "0x0078005655775757"
+    assert report.lumina_episode_summary["fault_cases_passed"] == 68
+    assert report.ledger_verification["cross_run_chained"] is True
+

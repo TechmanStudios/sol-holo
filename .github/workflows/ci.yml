@@ -1,0 +1,59 @@
+name: SOL-Holo CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: sol-holo-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify-sol-holo:
+    name: Verify SOL-Holo (${{ matrix.os }} / py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          lfs: false
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install SOL-Holo and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e . pytest
+
+      - name: Verify 14-Frontier Master Manifest and Synthesis CLI
+        run: |
+          python -m sol_holo.cli manifest --output sol_holo_ci_manifest.json
+          python -m sol_holo.cli synthesize --output sol_holo_ci_synthesis.json
+
+      - name: Run SOL-Holo test suite
+        run: |
+          python -m pytest tests/test_sol_holo.py -q --junitxml=sol-holo-results.xml
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: sol-holo-results-${{ matrix.os }}-py${{ matrix.python-version }}
+          path: sol-holo-results.xml
+          if-no-files-found: ignore

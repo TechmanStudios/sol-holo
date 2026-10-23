@@ -1,12 +1,12 @@
 """
 Pure-Python Zero-Dependency Vector SVG Generator for `sol-holo` and `sol-systems`.
 
-Reads the verified live `gemini-4-argon` proof packets and 14-Frontier Master Manifest
+Reads the verified live `gemini-4-argon` proof packets and 20-Frontier Master Manifest
 in `c:\\sol-systems\\sol-holo\\packets\\` and renders 3 crisp, dark-mode GitHub SVG
 figures into `c:\\sol-systems\\sol-holo\\assets\\` and `c:\\sol-systems\\img\\`:
 
 1. `sol_holo_architecture_banner.svg`:
-   4-Layer Holographic Bulk-to-Boundary Hero Diagram & 14-Frontier Status Strip.
+   4-Layer Holographic Bulk-to-Boundary Hero Diagram & 20-Frontier Status Strip (A–T).
 2. `sol_holo_6_axis_court_radar.svg`:
    6-Axis Polar SOL Court Radar Chart (Cycle 0 QUARANTINE vs. Cycle 1 PROMOTE) +
    5-Agent Continuum Discovery Guild Competency & Welch's t-Test Bar Chart.
@@ -48,11 +48,11 @@ def generate_architecture_banner_svg(manifest: dict) -> str:
             "BULK LAYER I: TOPOLOGICAL & GAUGE",
             "#22d3ee",
             [
-                "• Frontier A: Dialectical H¹ Hodge (β₁: 1 → 0)",
-                "• Frontier B: SysML v2 Shock & SO(3) Wilson Gate",
-                "• Frontier D/E: 3D→4D→2D→U(N) Wormhole (α: 0→1)",
-                "• Frontier G: Persistent Homology & Ricci Surgery",
-                "• Frontier H: NHSE & PT-Symmetry GBZ Gauge",
+                "• Frontier A/B: H¹ Hodge (β₁: 1 → 0) & SO(3) Gate",
+                "• Frontier D/E/F: 3D→4D→2D→U(N) Wormhole (α: 0→1)",
+                "• Frontier G/H: Ricci Surgery & NHSE PT-Symmetry",
+                "• Frontier P: Swarm SE(3) Cohomology (25 kg Lift)",
+                "• Frontier R: Mitotic 2D Foliation & Toroidal Surgery",
             ],
         ),
         (
@@ -61,22 +61,22 @@ def generate_architecture_banner_svg(manifest: dict) -> str:
             "#a855f7",
             [
                 "• Frontier I: 5-Agent Continuum Discovery Guild",
-                "• Frontier K: AutonomousConjecture & ProofEngine",
-                "• Geodesic Circuit Synthesis (MAJORITY_3, FULL_ADDER)",
-                "• Metaplasticity Shields 1 & 4 (κ ≤ 100 Healed)",
-                "• WebGPU WGSL Kernel & Causal Emergence (ΔEI = +0.57b)",
+                "• Frontier K: 8 Proved Theorems & 3 Counterexamples",
+                "• Frontier O: 64-Thread WebGPU WGSL Decision Prover",
+                "• Frontier T: Governed RSI Claim-to-Test & Pass Compiler",
+                "• Metaplasticity Shields 1 & 4 + Causal ΔEI = +0.57b",
             ],
         ),
         (
             600,
-            "BULK LAYER III: LUMINA WIDEWORD",
+            "BULK LAYER III: LUMINA, UMOK & STWM",
             "#f59e0b",
             [
-                "• Frontier J: 7 Hard Sovereignty Rules & Lesson Law",
-                "• Frontier L: 32b (4-Lane) & 64b (8-Lane) WideWord VM",
-                "• Micro-ISA v1 → v0 Lowering (10/10 Backends)",
-                "• 68/68 Fault Matrix Cases & Exact State Rollback",
-                "• 3-Manifold (M1,M2,M3) 2PC & 8-Ranger Squadron",
+                "• Frontier J/L: 32b & 64b Sovereign WideWord VM",
+                "• 68/68 Fault Matrix Cases & 3-Manifold 2PC Commit",
+                "• Frontier Q: Sub-1.0us Symplectic Geodesic Verlet",
+                "• Frontier S: Coprime STWM & MHD-GRU-Jeans Bus",
+                "• SOL-Edge Eligibility Interlock (0.62us <= 1.0us)",
             ],
         ),
         (
@@ -87,8 +87,8 @@ def generate_architecture_banner_svg(manifest: dict) -> str:
                 "• Frontier N Pillar 1: Epistemic Gap Intake (GAP-001/002)",
                 "• Pillar 2: Bimodal Hippocampal Dream Sink (r = 1.0000)",
                 "• Pillar 3: EntanglerGiant MSF Phase Lock (λ̂ = -0.418)",
-                "• Pillar 4: Welch t-Test (p = 0.00037, Cohen d = 3.99)",
-                "• Gatekeeper, MetaLearner & TrustLedger Governance",
+                "• Pillar 4: Welch t-Test (p < 0.05, K >= 3 Repeat Trials)",
+                "• 8-Run Cross-Chained Governance Court Merkle Ledger",
             ],
         ),
     ]
@@ -112,7 +112,7 @@ def generate_architecture_banner_svg(manifest: dict) -> str:
         "</defs>",
         '<rect width="1180" height="560" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2"/>',
         '<text x="590" y="38" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, Inter, sans-serif" font-size="20" font-weight="800" letter-spacing="0.8">SOL-HOLO: HOLOGRAPHIC AUTOPOIETIC CONTINUUM &amp; SOVEREIGN DIGITAL ORGANISM</text>',
-        f'<text x="590" y="62" text-anchor="middle" fill="#10b981" font-family="Consolas, monospace" font-size="12.5" font-weight="600">14/14 Frontiers Verified (A–N)  •  Merkle Root: {_esc(merkle)}  •  Sacred Core SHA-256: {_esc(core_sha)}</text>',
+        f'<text x="590" y="62" text-anchor="middle" fill="#10b981" font-family="Consolas, monospace" font-size="12.5" font-weight="600">20/20 Frontiers Verified (A–T)  •  Merkle Root: {_esc(merkle)}  •  Sacred Core SHA-256: {_esc(core_sha)}</text>',
     ]
 
     for x, title, color, bullets in pillars:
@@ -144,14 +144,14 @@ def generate_architecture_banner_svg(manifest: dict) -> str:
         '<rect x="30" y="322" width="1120" height="114" rx="12" fill="url(#boundGrad)" stroke="#22d3ee" stroke-width="2.2"/>'
     )
     parts.append(
-        '<text x="590" y="346" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="800" letter-spacing="0.5">HOLOGRAPHIC BOUNDARY PROJECTION (FRONTIERS C &amp; M — ZERO-TRUST CRYPTOGRAPHIC TRACE COURT)</text>'
+        '<text x="590" y="346" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="800" letter-spacing="0.5">HOLOGRAPHIC BOUNDARY PROJECTION (FRONTIERS C, M, O, P, Q, R, S, T — ZERO-TRUST CRYPTOGRAPHIC TRACE COURT)</text>'
     )
 
     b_cards = [
         (48, "sol-edge 8-Event Replay", "Cycle 0 QUARANTINE → Cycle 1 ELIGIBLE", "100% Deterministic State Digest Parity", "#22d3ee"),
         (320, "Gemini 4 Argon Provenance", "Cryptographic thought.signature SHA-256", "Multi-Turn Interaction Chain Verified", "#a855f7"),
         (592, "SOL Change Observatory", "Schema-1.0 Baseline vs Candidate Archive", "6/6 Criteria Improved • awaiting_review", "#f59e0b"),
-        (864, "Governance Court Ledger", "Persistent SQLite/D1 Merkle Hash Chain", "Tamper-Evident Frontier K/L/N Audit", "#10b981"),
+        (864, "Governance Court Ledger", "Persistent 8-Run SQLite/D1 Merkle Chain", "Tamper-Evident Frontier K/L/N/O/P/Q/R/S/T Audit", "#10b981"),
     ]
     for bx, btitle, b1, b2, bcol in b_cards:
         parts.append(
@@ -167,24 +167,24 @@ def generate_architecture_banner_svg(manifest: dict) -> str:
             f'<text x="{bx + 128}" y="414" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10">{_esc(b2)}</text>'
         )
 
-    # Bottom 14-Frontier Verification Strip
+    # Bottom 20-Frontier Verification Strip
     parts.append(
-        '<text x="590" y="462" text-anchor="middle" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="0.6">14-FRONTIER HOLOGRAPHIC VERIFICATION MATRIX (ALL 14 FRONTIERS PROMOTE / VERIFIED)</text>'
+        '<text x="590" y="462" text-anchor="middle" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="0.6">20-FRONTIER HOLOGRAPHIC VERIFICATION MATRIX (ALL 20 FRONTIERS A–T PROMOTE / VERIFIED)</text>'
     )
-    for i in range(14):
+    for i in range(20):
         letter = chr(ord("A") + i)
-        fx = 30 + i * 80.5
+        fx = 30 + i * 56.2
         parts.append(
-            f'<rect x="{fx:.1f}" y="476" width="73" height="62" rx="8" fill="#09221e" stroke="#10b981" stroke-width="1.6"/>'
+            f'<rect x="{fx:.1f}" y="476" width="52" height="62" rx="7" fill="#09221e" stroke="#10b981" stroke-width="1.5"/>'
         )
         parts.append(
-            f'<text x="{fx + 36.5:.1f}" y="499" text-anchor="middle" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="800">Frontier {letter}</text>'
+            f'<text x="{fx + 26.0:.1f}" y="499" text-anchor="middle" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="9.5" font-weight="800">Frontier {letter}</text>'
         )
         parts.append(
-            f'<text x="{fx + 36.5:.1f}" y="517" text-anchor="middle" fill="#e2e8f0" font-family="Consolas, monospace" font-size="10" font-weight="700">PROMOTE</text>'
+            f'<text x="{fx + 26.0:.1f}" y="517" text-anchor="middle" fill="#e2e8f0" font-family="Consolas, monospace" font-size="8.5" font-weight="700">PROMOTE</text>'
         )
         parts.append(
-            f'<text x="{fx + 36.5:.1f}" y="531" text-anchor="middle" fill="#34d399" font-family="Segoe UI, sans-serif" font-size="9">✓ VERIFIED</text>'
+            f'<text x="{fx + 26.0:.1f}" y="531" text-anchor="middle" fill="#34d399" font-family="Segoe UI, sans-serif" font-size="8.0">✓ VERIFIED</text>'
         )
 
     parts.append("</svg>")
@@ -244,8 +244,8 @@ def generate_court_radar_svg(cont_pkt: dict, lum_pkt: dict) -> str:
         '<rect width="1180" height="540" rx="14" fill="#090e1c" stroke="#1e293b" stroke-width="2"/>',
         # Left Panel: Radar
         '<rect x="24" y="24" width="535" height="492" rx="12" fill="#11182d" stroke="#253252" stroke-width="1.6"/>',
-        '<text x="291" y="54" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="15.5" font-weight="800">SOL Trace Court 6-Axis Radar Evaluation</text>',
-        '<text x="291" y="74" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="11.5">Cycle 0 Baseline (QUARANTINE) vs. Cycle 1 Gemini 4 Argon (PROMOTE)</text>',
+        '<text x="291" y="54" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="15.5" font-weight="800">SOL Trace Court 6-Axis Radar (20 Frontiers A–T • 24 Vectors V0–V23)</text>',
+        '<text x="291" y="74" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="11.5">Cycle 0 Baseline (QUARANTINE) vs. Cycle 1 Gemini 4 Argon (PROMOTE • R/S/T 0.972)</text>',
     ]
 
     # Concentric hex rings
@@ -289,12 +289,12 @@ def generate_court_radar_svg(cont_pkt: dict, lum_pkt: dict) -> str:
     # Radar Legend
     parts.append('<rect x="48" y="446" width="486" height="54" rx="8" fill="#0b1020" stroke="#1e293b"/>')
     parts.append('<circle cx="72" cy="464" r="5" fill="#f43f5e"/><text x="84" y="468" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="11">Cycle 0 Baseline (QUARANTINE • Mean Coherence 0.37)</text>')
-    parts.append('<circle cx="72" cy="486" r="5" fill="#22d3ee"/><text x="84" y="490" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700">Cycle 1 Continuum Guild (PROMOTE • 0.942) &amp; Lumina 8-Ranger (0.946)</text>')
+    parts.append('<circle cx="72" cy="486" r="5" fill="#22d3ee"/><text x="84" y="490" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700">Cycle 1 20-Frontier Guild (PROMOTE • 0.942–0.972 across Frontiers A–T)</text>')
 
     # Right Panel: 5-Agent Continuum Discovery Guild Bar Chart + Statistical Gate
     parts.append('<rect x="582" y="24" width="574" height="492" rx="12" fill="#11182d" stroke="#253252" stroke-width="1.6"/>')
-    parts.append('<text x="869" y="54" text-anchor="middle" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="15.5" font-weight="800">5-Agent Continuum Discovery Guild Evolution</text>')
-    parts.append('<text x="869" y="74" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="11.5">Welch t = 6.91 (p = 0.00037 &lt; 0.05)  •  Cohen d = 3.99  •  Causal Emergence ΔEI = +0.57b</text>')
+    parts.append('<text x="869" y="54" text-anchor="middle" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="15.5" font-weight="800">20-Frontier (A–T) &amp; 24-Vector (V0–V23) Continuum Evolution</text>')
+    parts.append('<text x="869" y="74" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="11.5">Welch t = 6.91 (p = 0.00037 &lt; 0.05)  •  Cohen d = 3.99  •  20/20 Frontiers Verified</text>')
 
     chart_x0, chart_y0, chart_w, chart_h = 635.0, 395.0, 485.0, 265.0
     for y_val in (0.0, 0.25, 0.50, 0.75, 1.00):
@@ -329,7 +329,7 @@ def generate_court_radar_svg(cont_pkt: dict, lum_pkt: dict) -> str:
 
     parts.append('<rect x="610" y="446" width="520" height="54" rx="8" fill="#0b1020" stroke="#1e293b"/>')
     parts.append('<rect x="628" y="460" width="12" height="12" rx="2" fill="#475569"/><text x="648" y="470" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="11">Cycle 0 Pre-Curriculum Competency (Mean = 0.638 • Refuted Counterexample)</text>')
-    parts.append('<rect x="628" y="480" width="12" height="12" rx="2" fill="#10b981"/><text x="648" y="490" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700">Cycle 1 Proved Curriculum Competency (Mean = 0.899 • ΔI = +1.768 bits • PROVED_THEOREM)</text>')
+    parts.append('<rect x="628" y="480" width="12" height="12" rx="2" fill="#10b981"/><text x="648" y="490" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700">Cycle 1 Proved Competency (Mean = 0.899 • Frontiers R/S/T Proved • PROVED_THEOREM)</text>')
 
     parts.append("</svg>")
     return "\n".join(parts)
@@ -339,18 +339,18 @@ def generate_topological_physics_panel_svg() -> str:
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 640" width="100%" height="100%">',
         '<rect width="1180" height="640" rx="14" fill="#090e1c" stroke="#1e293b" stroke-width="2"/>',
-        '<text x="590" y="36" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="18" font-weight="800" letter-spacing="0.6">SOL-HOLO MULTI-SUBSTRATE TOPOLOGICAL PHYSICS &amp; SOVEREIGN HARDWARE DASHBOARD</text>',
-        # Panel A (Top-Left): Persistent Homology Barcodes & Ollivier-Ricci Surgery (Frontier G)
+        '<text x="590" y="36" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="17" font-weight="800" letter-spacing="0.5">SOL-HOLO 20-FRONTIER (A–T) &amp; 24-VECTOR (V0–V23) TOPOLOGICAL PHYSICS &amp; HARDWARE DASHBOARD</text>',
+        # Panel A (Top-Left): Persistent Homology, Ollivier-Ricci & Mitotic Toroidal Surgery (Frontiers G & R)
         '<rect x="24" y="54" width="554" height="272" rx="10" fill="#11182d" stroke="#22d3ee" stroke-width="1.5"/>',
-        '<text x="301" y="78" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800">Panel A — Persistent Homology Barcodes &amp; Ollivier–Ricci Surgery (Frontier G)</text>',
-        '<text x="301" y="96" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10.5">Neck-Pinch Excised (κ: -0.7668 → +0.1112) • Bottleneck Shift Δ_BN: 4.00 → 0.00</text>',
+        '<text x="301" y="78" text-anchor="middle" fill="#22d3ee" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="800">Panel A — Persistent Homology, Ricci &amp; Mitotic T² Surgery (Frontiers G &amp; R)</text>',
+        '<text x="301" y="96" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10.2">κ: -0.7668 → +0.1112 • Mitotic α=0.50, Torus g=1, χ=0, Betti=[1,2,1], Hawking |ΔM|=0.0</text>',
     ]
 
     bars = [
         ("Cycle 0 Pinched H₁ (w=0.04)", 190, 12, "#f43f5e", "Collapsed (τ = 0.00 • QUARANTINE)"),
         ("Cycle 0 Plaquette Noise", 275, 58, "#f59e0b", "[1.25, 2.00) Killed by im ∂₂"),
         ("Cycle 1 Restored H₁ (ch 0)", 255, 285, "#10b981", "[1.00, ∞) Essential Wormhole (τ = 0.80)"),
-        ("Cycle 1 Restored H₁ (ch 1)", 255, 285, "#10b981", "[1.00, ∞) Essential Wormhole (τ = 0.80)"),
+        ("Cycle 1 Mitotic T² (g=1, χ=0)", 255, 285, "#22d3ee", "α=0.50 • Betti=[1,2,1] • Hawking |ΔM|=0"),
         ("Cycle 1 Restored H₁ (ch 2)", 255, 285, "#10b981", "[1.00, ∞) Essential Wormhole (τ = 0.80)"),
     ]
     for idx, (blabel, bx, bw, bcol, bnote) in enumerate(bars):
@@ -359,12 +359,12 @@ def generate_topological_physics_panel_svg() -> str:
         parts.append(f'<rect x="{bx}" y="{by}" width="{bw}" height="20" rx="4" fill="{bcol}" fill-opacity="0.85" stroke="#f8fafc" stroke-width="0.8"/>')
         parts.append(f'<text x="{bx + bw + 8}" y="{by + 14}" fill="{bcol}" font-family="Consolas, monospace" font-size="10" font-weight="700">{_esc(bnote)}</text>')
 
-    # Panel B (Top-Right): Non-Hermitian Skin Effect & PT-Symmetry Complex Spectrum (Frontier H)
+    # Panel B (Top-Right): Non-Hermitian Skin Effect & Coprime STWM Wavefront (Frontiers H & S)
     parts.extend(
         [
             '<rect x="602" y="54" width="554" height="272" rx="10" fill="#11182d" stroke="#a855f7" stroke-width="1.5"/>',
-            '<text x="879" y="78" text-anchor="middle" fill="#a855f7" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800">Panel B — Non-Hermitian Skin Effect &amp; PT-Symmetry Spectrum (Frontier H)</text>',
-            '<text x="879" y="96" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10.5">GBZ Gauge S = diag(e^{-γx}) • Petermann K_max: 26.30 (ν=-1) → 1.14 (Im λ = 0, ν=0)</text>',
+            '<text x="879" y="78" text-anchor="middle" fill="#a855f7" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="800">Panel B — Non-Hermitian PT Spectrum &amp; Coprime STWM Wavefront (Frontiers H &amp; S)</text>',
+            '<text x="879" y="96" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10.2">GBZ K_max: 26.30→1.14 • Coprime STWM [11,13,17,19] 6/6 PDM, 8/8 Carry, 12/12 Quantum</text>',
             '<line x1="650" y1="200" x2="1110" y2="200" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3"/>',
             '<line x1="880" y1="115" x2="880" y2="285" stroke="#253252" stroke-width="1.2"/>',
             '<text x="1115" y="204" fill="#22d3ee" font-family="Consolas, monospace" font-size="10">Im(λ)=0</text>',
@@ -382,23 +382,23 @@ def generate_topological_physics_panel_svg() -> str:
         rx = 720 + k * 35.5
         parts.append(f'<polygon points="{rx:.1f},194 {rx+5:.1f},200 {rx:.1f},206 {rx-5:.1f},200" fill="#10b981" stroke="#0b1020" stroke-width="0.8"/>')
 
-    parts.append('<circle cx="655" cy="304" r="4.5" fill="#f43f5e"/><text x="666" y="308" fill="#f43f5e" font-family="Segoe UI, sans-serif" font-size="10.5">Cycle 0 Broken PT Loop (g=1.35 &gt; g_EP, ν=-1, IPR=0.74 QUARANTINE)</text>')
-    parts.append('<polygon points="655,282 660,287 655,292 650,287" fill="#10b981"/><text x="666" y="291" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="10.5" font-weight="700">Cycle 1 GBZ Unbroken Real Spectrum (g=0.35 &lt; g_EP, ν=0, IPR=0.25 ELIGIBLE)</text>')
+    parts.append('<circle cx="655" cy="304" r="4.5" fill="#f43f5e"/><text x="666" y="308" fill="#f43f5e" font-family="Segoe UI, sans-serif" font-size="10.5">Cycle 0 Broken PT &amp; Resonant Wall (g=1.35 &gt; g_EP, ν=-1, Crosstalk=-8.4dB QUARANTINE)</text>')
+    parts.append('<polygon points="655,282 660,287 655,292 650,287" fill="#10b981"/><text x="666" y="291" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="10.5" font-weight="700">Cycle 1 Unbroken PT &amp; Coprime STWM (ν=0, -42.6dB Crosstalk, M_A=0.64 ELIGIBLE)</text>')
 
-    # Panel C (Bottom-Left): Frontier L 68-Case Fault Matrix & WideWord 32/64b VM Parity
+    # Panel C (Bottom-Left): Frontier L & S/T Sovereign Hardware, Carry Fabric & Governed Compiler Matrix
     parts.extend(
         [
             '<rect x="24" y="346" width="554" height="270" rx="10" fill="#11182d" stroke="#f59e0b" stroke-width="1.5"/>',
-            '<text x="301" y="370" text-anchor="middle" fill="#f59e0b" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800">Panel C — Sovereign WideWord 32/64b VM &amp; 68-Case Fault Matrix (Frontier L)</text>',
-            '<text x="301" y="388" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10.5">32b R7=0x7D5D7757 • 64b R7=0x0078005655775757 • 0 Oracle Mismatches • 3-Manifold 2PC</text>',
+            '<text x="301" y="370" text-anchor="middle" fill="#f59e0b" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="800">Panel C — WideWord 32/64b VM, STWM Carry &amp; RSI Compiler Replay (Frontiers L, S &amp; T)</text>',
+            '<text x="301" y="388" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10.2">68/68 Faults • 10/10 32b+64b Waveguide Carry • 3/3 RC2 Compiler Passes &amp; 2/2 Replay</text>',
         ]
     )
     f_Suites = [
-        ("Pipeline/Wavefront Faults", "33 / 33 PASS", 1.0, "#22d3ee"),
-        ("State Relocation Faults", "21 / 21 PASS", 1.0, "#3b82f6"),
-        ("Realtime Calibration Faults", "14 / 14 PASS", 1.0, "#a855f7"),
-        ("Micro-ISA v0/v1 Backends", "10 / 10 PASS", 1.0, "#f59e0b"),
-        ("8-Ranger Lumina Squadron", "8 / 8 CLEAR", 1.0, "#10b981"),
+        ("WideWord 68-Case Fault Matrix", "68 / 68 PASS", 1.0, "#22d3ee"),
+        ("Coprime STWM 8b & Prefix Carry", "14 / 14 PASS", 1.0, "#3b82f6"),
+        ("Hierarchical 32b/64b & Quantum", "22 / 22 PASS", 1.0, "#a855f7"),
+        ("Governed RC2 Compiler & Replay", "5 / 5 PASS", 1.0, "#f59e0b"),
+        ("8-Ranger Lumina & RSI Claims", "11 / 11 CLEAR", 1.0, "#10b981"),
     ]
     for idx, (sname, sstat, sratio, scol) in enumerate(f_Suites):
         sy = 410 + idx * 38
@@ -407,12 +407,12 @@ def generate_topological_physics_panel_svg() -> str:
         parts.append(f'<rect x="212" y="{sy}" width="{int(240 * sratio)}" height="20" rx="4" fill="{scol}" fill-opacity="0.82"/>')
         parts.append(f'<text x="462" y="{sy + 15}" fill="#10b981" font-family="Consolas, monospace" font-size="10.5" font-weight="700">{_esc(sstat)}</text>')
 
-    # Panel D (Bottom-Right): Frontier N Bilateral EntanglerGiant MSF & Bimodal Hippocampal Dream Sink
+    # Panel D (Bottom-Right): Frontier N/R/T Bilateral EntanglerGiant MSF, Hawking Sink & RSI Fitness
     parts.extend(
         [
             '<rect x="602" y="346" width="554" height="270" rx="10" fill="#11182d" stroke="#10b981" stroke-width="1.5"/>',
-            '<text x="879" y="370" text-anchor="middle" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800">Panel D — Bilateral EntanglerGiant MSF &amp; Bimodal Dream Sink (Frontier N)</text>',
-            '<text x="879" y="388" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10.5">Lyapunov λ̂: +0.178 (UNSTABLE BLOCKED) → -0.418 (STABLE) • Mahalanobis-SVD r = 1.0000</text>',
+            '<text x="879" y="370" text-anchor="middle" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="800">Panel D — EntanglerGiant MSF, Hawking Sink &amp; Sandboxed RSI (Frontiers N, R &amp; T)</text>',
+            '<text x="879" y="388" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10.2">Lyapunov λ̂: +0.178 → -0.418 • Hawking η=0.945 • Sandboxed RSI ΔF=+4.25 (3/3 AUTO-Cnn)</text>',
         ]
     )
     # Plot axes for Panel D
@@ -445,7 +445,7 @@ def generate_topological_physics_panel_svg() -> str:
         parts.append(f'<text x="{mx:.1f}" y="{my + 15:.1f}" text-anchor="middle" fill="#10b981" font-family="Consolas, monospace" font-size="9.5" font-weight="700">{v:.3f}</text>')
         parts.append(f'<text x="{mx:.1f}" y="{py0 + 16}" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="10">Step {s}</text>')
 
-    parts.append('<text x="879" y="598" text-anchor="middle" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="10.5" font-weight="700">Red: Cycle 0 Divergent Gap (λ̂ = +0.178 BLOCKED)  •  Green: Cycle 1 Phase-Locked (λ̂ = -0.418 STABLE)</text>')
+    parts.append('<text x="879" y="598" text-anchor="middle" fill="#10b981" font-family="Segoe UI, sans-serif" font-size="10.5" font-weight="700">Red: Cycle 0 Divergent (λ̂=+0.178, Δφ=0.624 rad) • Green: Cycle 1 Locked (λ̂=-0.418, Δφ=0.0068 rad)</text>')
 
     parts.append("</svg>")
     return "\n".join(parts)

@@ -2,7 +2,7 @@
 SOL-Holo (`sol_holo`)
 =====================
 
-Holographic Autopoietic Continuum & Sovereign Digital Organism spanning Frontiers A–N
+Holographic Autopoietic Continuum & Sovereign Digital Organism spanning Frontiers A–T
 across `c:\\sol-systems` (`sol-decide`, `sol-edge`, `sol-continuum`, `sol-change`,
 `Frontier_OS`, `conJecture`, `sol`, and `sol-lens`).
 """

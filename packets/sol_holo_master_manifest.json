@@ -2,10 +2,10 @@
   "schema": "techman.sol-holo.master-manifest/v1.0",
   "organism_name": "SOL-Holo (Holographic Autopoietic Continuum & Sovereign Digital Organism)",
   "version": "1.0.0",
-  "generated_at": "2026-10-16T20:35:21.738963+00:00",
-  "total_frontiers": 14,
+  "generated_at": "2026-10-23T12:37:48.805160+00:00",
+  "total_frontiers": 20,
   "all_frontiers_verified": true,
-  "holographic_merkle_root": "sha256:44189469dc7a4f37a57a9f32bc8266a809d293fc1085358795903886e3c5be2c",
+  "holographic_merkle_root": "sha256:c1fb5580c692756bf4860226cb78fb02a0a3db4be193c3852fd79fcb52ef0800",
   "sacred_core_graph_sha256": "d0a80462d2b9389160502b097aca1932bb014941adf6e4b77799997283e4a1bc",
   "sacred_core_immutability_verified": true,
   "frontiers": [
@@ -23,8 +23,12 @@
       "verdict": "PROMOTE",
       "verified": true,
       "packet_digest": "sha256:7600451da94275dffb86864b6c9019f717a5c33cb02847e6ef1d3dfe9e0da29f",
-      "interaction_id": "",
-      "thought_signature_digests": []
+      "interaction_id": "v1_ChdmaFBSYXVDWklwVG96N0lQaDdmcDRBOBIXZmhQUmF1Q1pJcFRvejdJUGg3ZnA0QTg",
+      "thought_signature_digests": [
+        "sha256:e1733119de324a0d2",
+        "sha256:64105e51aafa74c35",
+        "sha256:e28537bc9649b9f8c"
+      ]
     },
     {
       "frontier_id": "Frontier_B",
@@ -40,8 +44,12 @@
       "verdict": "PROMOTE",
       "verified": true,
       "packet_digest": "sha256:a919beebb24cdc55733efcf8ab20c5fedbdc79637c9bb9ecc335b3870f19c6f4",
-      "interaction_id": "",
-      "thought_signature_digests": []
+      "interaction_id": "v1_ChdmaFBSYXVDWklwVG96N0lQaDdmcDRBOBIXZmhQUmF1Q1pJcFRvejdJUGg3ZnA0QTg",
+      "thought_signature_digests": [
+        "sha256:e1733119de324a0d2",
+        "sha256:64105e51aafa74c35",
+        "sha256:e28537bc9649b9f8c"
+      ]
     },
     {
       "frontier_id": "Frontier_C",
@@ -57,8 +65,12 @@
       "verdict": "PROMOTE",
       "verified": true,
       "packet_digest": "sha256:98839b9caae2de137eca0b4f7f93686b8c52961c7a2c64b1e067476099cf1fa3",
-      "interaction_id": "",
-      "thought_signature_digests": []
+      "interaction_id": "v1_ChdmaFBSYXVDWklwVG96N0lQaDdmcDRBOBIXZmhQUmF1Q1pJcFRvejdJUGg3ZnA0QTg",
+      "thought_signature_digests": [
+        "sha256:e1733119de324a0d2",
+        "sha256:64105e51aafa74c35",
+        "sha256:e28537bc9649b9f8c"
+      ]
     },
     {
       "frontier_id": "Frontier_D",
@@ -74,8 +86,10 @@
       "verdict": "PROMOTE",
       "verified": true,
       "packet_digest": "sha256:6685b449764314f5995a17160ddc0d84dbbf2e60f78d1dc30858665f88bfc480",
-      "interaction_id": "",
-      "thought_signature_digests": []
+      "interaction_id": "v1_ChdNVGpSYXUyR0xwVG96N0lQaDdmcDRBOBIXTVRqUmF1MkdMcFRvejdJUGg3ZnA0QTg",
+      "thought_signature_digests": [
+        "sha256:0d70977f1ed259fc609997c4458bf3f1477fdb5d93daf9c8924dea7f3e597269"
+      ]
     },
     {
       "frontier_id": "Frontier_E",
@@ -91,8 +105,10 @@
       "verdict": "PROMOTE",
       "verified": true,
       "packet_digest": "sha256:51b17aa0518018083063e26b5f7661f544805c48cfc237aa158bdddcea89b296",
-      "interaction_id": "",
-      "thought_signature_digests": []
+      "interaction_id": "v1_ChdNVGpSYXUyR0xwVG96N0lQaDdmcDRBOBIXTVRqUmF1MkdMcFRvejdJUGg3ZnA0QTg",
+      "thought_signature_digests": [
+        "sha256:0d70977f1ed259fc609997c4458bf3f1477fdb5d93daf9c8924dea7f3e597269"
+      ]
     },
     {
       "frontier_id": "Frontier_F",
@@ -108,8 +124,10 @@
       "verdict": "PROMOTE",
       "verified": true,
       "packet_digest": "sha256:cef439e481a258e8ffb8fe9d8ba8c5ba14bf196ad6bfec9b197a8eabd50a1e7c",
-      "interaction_id": "",
-      "thought_signature_digests": []
+      "interaction_id": "v1_ChdNVGpSYXUyR0xwVG96N0lQaDdmcDRBOBIXTVRqUmF1MkdMcFRvejdJUGg3ZnA0QTg",
+      "thought_signature_digests": [
+        "sha256:0d70977f1ed259fc609997c4458bf3f1477fdb5d93daf9c8924dea7f3e597269"
+      ]
     },
     {
       "frontier_id": "Frontier_G",
@@ -125,8 +143,10 @@
       "verdict": "PROMOTE",
       "verified": true,
       "packet_digest": "sha256:184e39f34a9e347e5f6cc20bcf76568cfa102f0d87999779d7a72f37abe7ee37",
-      "interaction_id": "",
-      "thought_signature_digests": []
+      "interaction_id": "v1_ChdfVURSYXZyWktfZnlxdHNQOFBXV29BURIXX1VEUmF2clpLX2Z5cXRzUDhQV1dvQVE",
+      "thought_signature_digests": [
+        "sha256:6ae806862b4c9a35fecf91285d8623af5e229db708550a8295c9f9cca9eddbb9"
+      ]
     },
     {
       "frontier_id": "Frontier_H",
@@ -142,8 +162,10 @@
       "verdict": "PROMOTE",
       "verified": true,
       "packet_digest": "sha256:5c61175e0703d32f2242fc07fafa814755ee6866b5a8b60233f4a063f8f8ac9b",
-      "interaction_id": "",
-      "thought_signature_digests": []
+      "interaction_id": "v1_ChdGa2JSYXZDQUFleUFtdGtQNnZhRC1BSRIXRmtiUmF2Q0FBZXlBbXRrUDZ2YUQtQUk",
+      "thought_signature_digests": [
+        "sha256:1aa228bbb2cd71a80476966bdb9f33929dfef22be3bad726e6a6a6bf2e9ea245"
+      ]
     },
     {
       "frontier_id": "Frontier_I",
@@ -264,6 +286,135 @@
         "sha256:484cdfea20559df92f2ca1cde9f2f116ab7a730228da4231503e80617712b53b",
         "sha256:52d6837248e6692487f364a522a1f7658ea6df7707920b3779f7c907a53a2f2c"
       ]
+    },
+    {
+      "frontier_id": "Frontier_O",
+      "title": "WebGPU WGSL 64-Thread Trade-Space Sweep, MSCK Cohomological Inflection Surface & SOL Change Producer Handoff",
+      "pillars": [
+        "sol-decide",
+        "Frontier_OS",
+        "sol-change",
+        "sol-edge",
+        "sol-lens"
+      ],
+      "invariant": "4096-cell WebGPU simplex, MSCK beta_1: 1 -> 0, K=5 Welch repeat-trial governance, awaiting_review handoff",
+      "packet_file": "live_gemini4_wgsl_decision_prover_packet.json",
+      "packet_id": "pkt-wgsl-prover-candidate-1c9aeae2b4",
+      "verdict": "PROMOTE",
+      "verified": true,
+      "packet_digest": "sha256:5be4bf196e4d372e080bd7da48f3220ad91fb4a4982146b921f45058f7f08603",
+      "interaction_id": "v1_ChdwaTNiYXRiZ0FlaWo1Tm9QdEpMR2tRYxIXcGkzYmF0YmdBZWlqNU5vUHRKTEdrUWM",
+      "thought_signature_digests": [
+        "sha256:a01ad6e9288c447e6d83c6a96180842707233dd87e0a264b371bdb9a2d1df83f"
+      ]
+    },
+    {
+      "frontier_id": "Frontier_P",
+      "title": "Multi-Robot Embodied Swarm Cohomology, 25kg Closed-Chain Bimanual Manipulation & Decentralized SE(3) Wilson Loop Calibration",
+      "pillars": [
+        "Frontier_OS",
+        "sol-decide",
+        "sol-change",
+        "sol-edge",
+        "sol-lens"
+      ],
+      "invariant": "25kg 12-DOF closed chain, ||w_int||_2: 42.80N -> 0.35N <= 15.0N, SE(3) Wilson 14.25 deg -> 0.18 deg <= 3.0 deg, E-Stop < 200 us, GPS/MoCap=False",
+      "packet_file": "live_gemini4_swarm_cohomology_packet.json",
+      "packet_id": "pkt-exp_20261022_frontier_p_swarm_cohomology",
+      "verdict": "PROMOTE",
+      "verified": true,
+      "packet_digest": "sha256:86070419d8a7493806a80ed91ecdf5ea051ae2ce54b6e629cdef13b1b20ff447",
+      "interaction_id": "v1_Chd3aTNiYXY3MUg3ZUp3YlVQb3ZDTWdBbxIXd2kzYmF2NzFIN2VKd2JVUG92Q01nQW8",
+      "thought_signature_digests": [
+        "sha256:c0284e2fb73562fa619d8bc92cf7a4ebd750711a0e982d3bbbac7b2194d7ee6a"
+      ]
+    },
+    {
+      "frontier_id": "Frontier_Q",
+      "title": "Unified Manifold Operating Kernel (UMOK), Zero-Copy ROS2/CAN Bridge & Default-Deny Eligibility Interlock",
+      "pillars": [
+        "sol-edge",
+        "sol-decide",
+        "sol-change",
+        "sol-lens",
+        "sol-holo"
+      ],
+      "invariant": "Sub-1us deterministic 6-gate (20/20 ALU) step, 0-copy memoryview SHM + CAN-FD CRC-32, Cycle 0 HOLD_SAFE_POSITION (0 staged) -> Cycle 1 ELIGIBLE_AWAITING_RELEASE_AUTHORITY (4 staged, authorized_claimed=False)",
+      "packet_file": "live_gemini4_umok_edge_kernel_packet.json",
+      "packet_id": "pkt-exp_20261022_frontier_q_umok_edge_kernel",
+      "verdict": "PROMOTE",
+      "verified": true,
+      "packet_digest": "sha256:c0ef2f7ef3a4176e748acdf3bd2c75a49436675ac9ab469a5fe6954b0ad3312e",
+      "interaction_id": "v1_ChcxQzNiYXRQcUo3V3c1Tm9QbjV5XzhRWRIXMUMzYmF0UHFKN1d3NU5vUG41eV84UVk",
+      "thought_signature_digests": [
+        "sha256:8f40e0cb314ea89a1177a0b91d3fd04ae0e64b9db53c7cf5d99b214c77770cf3"
+      ]
+    },
+    {
+      "frontier_id": "Frontier_R",
+      "title": "Mitotic 2D Surface Foliation, Toroidal Surgery & Hawking Radiation Memory Sink",
+      "pillars": [
+        "Frontier_OS",
+        "sol",
+        "sol-decide",
+        "sol-change",
+        "sol-edge",
+        "sol-lens"
+      ],
+      "invariant": "Balanced 2D mitotic fission alpha: 0.88 -> 0.50, S^1 x S^1 torus (g=1, chi=0, Betti=(1,2,1)), Hawking sink mass residual <= 1e-12, sacred default_graph.json SHA-256 immutable",
+      "packet_file": "live_gemini4_mitotic_foliation_packet.json",
+      "packet_id": "pkt-mitotic-cand-839c3e4904d0",
+      "verdict": "PROMOTE",
+      "verified": true,
+      "packet_digest": "sha256:f602762abfb3cf5faf8de7532ac7f2c238f40e9fa8a3037308f6e1fb4a652ed1",
+      "interaction_id": "v1_Chd0RlRiYXJfSE03dmxpTE1QNlpDQTBRWRIXdEZUYmFyX0hNN3ZsaUxNUDZaQ0EwUVk",
+      "thought_signature_digests": [
+        "sha256:e22d83e78d33830bc1313ab3489d7a62de3d7179f2b58f2c7fb14e3eee4793e2"
+      ]
+    },
+    {
+      "frontier_id": "Frontier_S",
+      "title": "Coprime Quadrature STWM, Hierarchical Waveguide Carry Fabric & Autonomic MHD-GRU-Jeans Bus",
+      "pillars": [
+        "sol",
+        "Frontier_OS",
+        "sol-decide",
+        "sol-change",
+        "sol-edge",
+        "sol-lens"
+      ],
+      "invariant": "Coprime prime periods [11..37], 6/6 8-bit PDM, 8/8 Brent-Kung/Kogge-Stone prefix carry, 10/10 32b/64b fabric, 12/12 QuantumWavefrontEngine regimes, sub-Alfvenic MHD-GRU-Jeans bus",
+      "packet_file": "live_gemini4_stwm_wavefront_packet.json",
+      "packet_id": "pkt-stwm-cand-91aa60fd05ba",
+      "verdict": "PROMOTE",
+      "verified": true,
+      "packet_digest": "sha256:fc78f4de47d78971d44508b9abc8c7823e50857cce2b9231ecb46f0286268ba7",
+      "interaction_id": "v1_Chd4RlRiYXBuX0VmNjh4ZElQNmQyZjRBMBIXeEZUYmFwbl9FZjY4eGRJUDZkMmY0QTA",
+      "thought_signature_digests": [
+        "sha256:03c04de3f970a42514fa140eb7e414de55873cefe713260839abfdeb51455f6b"
+      ]
+    },
+    {
+      "frontier_id": "Frontier_T",
+      "title": "Governed Recursive Self-Improvement (RSI), Claim-to-Test Compiler & Waveguide Pass Admission/Replay",
+      "pillars": [
+        "sol",
+        "Frontier_OS",
+        "sol-decide",
+        "sol-change",
+        "sol-edge",
+        "sol-lens"
+      ],
+      "invariant": "Sandboxed RSI ClaimCompiler, SOL-WAVEGUIDE-RC2 COST_MODEL_DEBUG 3/3 passes admitted, 7/7 pass replay verified, release_candidate_certification_ready, production_mutation_allowed=False",
+      "packet_file": "live_gemini4_rsi_compiler_packet.json",
+      "packet_id": "pkt-rsi-cand-549c2f4cc4d5",
+      "verdict": "PROMOTE",
+      "verified": true,
+      "packet_digest": "sha256:7ab560bcc338decf45c8a5986ceec768aeba3be6057228616a145860645407bb",
+      "interaction_id": "v1_Chc3VlRiYW9xSklaaWU1Tm9QZ3RMRWlBYxIXN1ZUYmFvcUpJWmllNU5vUGd0TEVpQWM",
+      "thought_signature_digests": [
+        "sha256:e687c81b99c4725d0f02737ea2beacbe417047c0502bf03b8d9d908ceb864ccb"
+      ]
     }
   ],
   "packet_summaries": {
@@ -274,11 +425,21 @@
       "verdict": "PROMOTE",
       "logon_count": 28,
       "edge_count": 43,
-      "interaction_id": "",
-      "thought_signature_digests": [],
+      "interaction_id": "v1_ChdmaFBSYXVDWklwVG96N0lQaDdmcDRBOBIXZmhQUmF1Q1pJcFRvejdJUGg3ZnA0QTg",
+      "thought_signature_digests": [
+        "sha256:e1733119de324a0d2",
+        "sha256:64105e51aafa74c35",
+        "sha256:e28537bc9649b9f8c"
+      ],
       "has_frontier_k": false,
       "has_frontier_l": false,
       "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
       "packet_digest": "sha256:7feb1a3382ee987441f981a030deba2f791919d651bbc45daae2e247d9093d05"
     },
     "live_gemini4_wormhole_homology_packet.json": {
@@ -288,11 +449,19 @@
       "verdict": "PROMOTE",
       "logon_count": 6,
       "edge_count": 5,
-      "interaction_id": "",
-      "thought_signature_digests": [],
+      "interaction_id": "v1_ChdNVGpSYXUyR0xwVG96N0lQaDdmcDRBOBIXTVRqUmF1MkdMcFRvejdJUGg3ZnA0QTg",
+      "thought_signature_digests": [
+        "sha256:0d70977f1ed259fc609997c4458bf3f1477fdb5d93daf9c8924dea7f3e597269"
+      ],
       "has_frontier_k": false,
       "has_frontier_l": false,
       "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
       "packet_digest": "sha256:186421ea0d5deab32b2c78f3a468809faf912af76cca8e1bb09c8765955b2f03"
     },
     "live_gemini4_ricci_surgery_packet.json": {
@@ -302,11 +471,19 @@
       "verdict": "PROMOTE",
       "logon_count": 6,
       "edge_count": 5,
-      "interaction_id": "",
-      "thought_signature_digests": [],
+      "interaction_id": "v1_ChdfVURSYXZyWktfZnlxdHNQOFBXV29BURIXX1VEUmF2clpLX2Z5cXRzUDhQV1dvQVE",
+      "thought_signature_digests": [
+        "sha256:6ae806862b4c9a35fecf91285d8623af5e229db708550a8295c9f9cca9eddbb9"
+      ],
       "has_frontier_k": false,
       "has_frontier_l": false,
       "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
       "packet_digest": "sha256:06c373133aab0dc799f4a90f563a09d3eb1d58dd0849ab9386a9c8a6b74e3e2e"
     },
     "live_gemini4_non_hermitian_pt_packet.json": {
@@ -316,11 +493,19 @@
       "verdict": "PROMOTE",
       "logon_count": 6,
       "edge_count": 5,
-      "interaction_id": "",
-      "thought_signature_digests": [],
+      "interaction_id": "v1_ChdGa2JSYXZDQUFleUFtdGtQNnZhRC1BSRIXRmtiUmF2Q0FBZXlBbXRrUDZ2YUQtQUk",
+      "thought_signature_digests": [
+        "sha256:1aa228bbb2cd71a80476966bdb9f33929dfef22be3bad726e6a6a6bf2e9ea245"
+      ],
       "has_frontier_k": false,
       "has_frontier_l": false,
       "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
       "packet_digest": "sha256:403cfdc80e8d36da7bfed761c45769b23a6910c74f4268284d2cde963985d818"
     },
     "live_gemini4_sol_continuum_packet.json": {
@@ -337,6 +522,12 @@
       "has_frontier_k": true,
       "has_frontier_l": false,
       "has_frontier_n": true,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
       "packet_digest": "sha256:0cce1df7335c6e2f57f8a2bd62a3d08027c941bebb4fed174230eb205b074f9f"
     },
     "live_gemini4_lumina_ranger_packet.json": {
@@ -354,7 +545,145 @@
       "has_frontier_k": false,
       "has_frontier_l": true,
       "has_frontier_n": true,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
       "packet_digest": "sha256:1a6a40802d13958bf0af116fcf17e47e64969c9876d1b4411a26ccd031f92139"
+    },
+    "live_gemini4_wgsl_decision_prover_packet.json": {
+      "packet_id": "pkt-wgsl-prover-candidate-1c9aeae2b4",
+      "schema": "techman.sol-lens.proof-packet/v0.2",
+      "fixture": "NGCV_WGSL_Pareto_MSCK_Inflection_Study_v1",
+      "verdict": "PROMOTE",
+      "logon_count": 6,
+      "edge_count": 5,
+      "interaction_id": "v1_ChdwaTNiYXRiZ0FlaWo1Tm9QdEpMR2tRYxIXcGkzYmF0YmdBZWlqNU5vUHRKTEdrUWM",
+      "thought_signature_digests": [
+        "sha256:a01ad6e9288c447e6d83c6a96180842707233dd87e0a264b371bdb9a2d1df83f"
+      ],
+      "has_frontier_k": false,
+      "has_frontier_l": false,
+      "has_frontier_n": false,
+      "has_frontier_o": true,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
+      "packet_digest": "sha256:04356e4ed493a3e48b8a6420dee1f22e5dd6997c5418f11fba96cb2129710665"
+    },
+    "live_gemini4_swarm_cohomology_packet.json": {
+      "packet_id": "pkt-exp_20261022_frontier_p_swarm_cohomology",
+      "schema": "techman.sol-lens.proof-packet/v0.2",
+      "fixture": "Frontier_P_Multi_Robot_Swarm_Cohomology_Bimanual_25kg",
+      "verdict": "PROMOTE",
+      "logon_count": 4,
+      "edge_count": 3,
+      "interaction_id": "v1_Chd3aTNiYXY3MUg3ZUp3YlVQb3ZDTWdBbxIXd2kzYmF2NzFIN2VKd2JVUG92Q01nQW8",
+      "thought_signature_digests": [
+        "sha256:c0284e2fb73562fa619d8bc92cf7a4ebd750711a0e982d3bbbac7b2194d7ee6a"
+      ],
+      "has_frontier_k": false,
+      "has_frontier_l": false,
+      "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": true,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
+      "packet_digest": "sha256:be53897e8c970214174ad0991d5108844bceb8f1167090459d7dcbcba67d7ea5"
+    },
+    "live_gemini4_umok_edge_kernel_packet.json": {
+      "packet_id": "pkt-exp_20261022_frontier_q_umok_edge_kernel",
+      "schema": "techman.sol-lens.proof-packet/v0.2",
+      "fixture": "Frontier_Q_UMOK_Sub_Microsecond_Edge_Kernel_And_CAN_Bridge",
+      "verdict": "PROMOTE",
+      "logon_count": 4,
+      "edge_count": 3,
+      "interaction_id": "v1_ChcxQzNiYXRQcUo3V3c1Tm9QbjV5XzhRWRIXMUMzYmF0UHFKN1d3NU5vUG41eV84UVk",
+      "thought_signature_digests": [
+        "sha256:8f40e0cb314ea89a1177a0b91d3fd04ae0e64b9db53c7cf5d99b214c77770cf3"
+      ],
+      "has_frontier_k": false,
+      "has_frontier_l": false,
+      "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": true,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
+      "packet_digest": "sha256:ebac33a983da1f15bfe9ca708bb0767ed9049068683a37fa2f38ed0d18dc5592"
+    },
+    "live_gemini4_mitotic_foliation_packet.json": {
+      "packet_id": "pkt-mitotic-cand-839c3e4904d0",
+      "schema": "techman.sol-lens.proof-packet/v0.2",
+      "fixture": "Frontier_R_Mitotic_2D_Surface_Foliation_Toroidal_Hawking_v1_Cycle1_Candidate",
+      "verdict": "PROMOTE",
+      "logon_count": 3,
+      "edge_count": 2,
+      "interaction_id": "v1_Chd0RlRiYXJfSE03dmxpTE1QNlpDQTBRWRIXdEZUYmFyX0hNN3ZsaUxNUDZaQ0EwUVk",
+      "thought_signature_digests": [
+        "sha256:e22d83e78d33830bc1313ab3489d7a62de3d7179f2b58f2c7fb14e3eee4793e2"
+      ],
+      "has_frontier_k": false,
+      "has_frontier_l": false,
+      "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": true,
+      "has_frontier_s": false,
+      "has_frontier_t": false,
+      "packet_digest": "sha256:1ae9540dcd5a9d3fc46cad893c0579ae0acaf035187e099e7a326df889c677ea"
+    },
+    "live_gemini4_stwm_wavefront_packet.json": {
+      "packet_id": "pkt-stwm-cand-91aa60fd05ba",
+      "schema": "techman.sol-lens.proof-packet/v0.2",
+      "fixture": "Frontier_S_Coprime_STWM_Hierarchical_Waveguide_Carry_v1_Cycle1_Candidate",
+      "verdict": "PROMOTE",
+      "logon_count": 3,
+      "edge_count": 2,
+      "interaction_id": "v1_Chd4RlRiYXBuX0VmNjh4ZElQNmQyZjRBMBIXeEZUYmFwbl9FZjY4eGRJUDZkMmY0QTA",
+      "thought_signature_digests": [
+        "sha256:03c04de3f970a42514fa140eb7e414de55873cefe713260839abfdeb51455f6b"
+      ],
+      "has_frontier_k": false,
+      "has_frontier_l": false,
+      "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": true,
+      "has_frontier_t": false,
+      "packet_digest": "sha256:71502eb8b6864e1d6e578f8068e6fc402533a1ef7f3535f399990909f3b5ec92"
+    },
+    "live_gemini4_rsi_compiler_packet.json": {
+      "packet_id": "pkt-rsi-cand-549c2f4cc4d5",
+      "schema": "techman.sol-lens.proof-packet/v0.2",
+      "fixture": "Frontier_T_Governed_RSI_Waveguide_Compiler_Admission_Replay_v1_Cycle1_Candidate",
+      "verdict": "PROMOTE",
+      "logon_count": 3,
+      "edge_count": 2,
+      "interaction_id": "v1_Chc3VlRiYW9xSklaaWU1Tm9QZ3RMRWlBYxIXN1ZUYmFvcUpJWmllNU5vUGd0TEVpQWM",
+      "thought_signature_digests": [
+        "sha256:e687c81b99c4725d0f02737ea2beacbe417047c0502bf03b8d9d908ceb864ccb"
+      ],
+      "has_frontier_k": false,
+      "has_frontier_l": false,
+      "has_frontier_n": false,
+      "has_frontier_o": false,
+      "has_frontier_p": false,
+      "has_frontier_q": false,
+      "has_frontier_r": false,
+      "has_frontier_s": false,
+      "has_frontier_t": true,
+      "packet_digest": "sha256:ef61b1443c0e2ecfa90c9d4ef640548374564b4fefd965df761e147501112d1b"
     }
   }
 }

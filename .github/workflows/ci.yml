@@ -41,7 +41,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -e . pytest
 
-      - name: Verify 14-Frontier Master Manifest and Synthesis CLI
+      - name: Verify 20-Frontier Master Manifest and Synthesis CLI
         run: |
           python -m sol_holo.cli manifest --output sol_holo_ci_manifest.json
           python -m sol_holo.cli synthesize --output sol_holo_ci_synthesis.json

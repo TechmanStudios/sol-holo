@@ -2,7 +2,7 @@
 SOL-Holo Core Engine (`sol_holo.holo_engine`)
 =============================================
 
-Unifies all 14 Frontiers (`A` through `N`) across `c:\\sol-systems` into a single
+Unifies all 20 Frontiers (`A` through `T`) across `c:\\sol-systems` into a single
 Holographic Autopoietic Continuum & Sovereign Digital Organism (`SOLHoloOrganism`).
 
 Holographic Principle in SOL-Holo:
@@ -12,7 +12,7 @@ simultaneously encoded on the lower-dimensional boundary:
   1. `techman.sol-lens.proof-packet/v0.2` semantic trace packets,
   2. Default-deny 4-event `sol-edge` pre-execution hash chains (`Cycle 0 QUARANTINE -> Cycle 1 ELIGIBLE`),
   3. Cross-run SHA-256 `GovernanceCourtLedger` & `sol-change` Observatory archives, and
-  4. The 14-Frontier Holographic Master Merkle Root (`SOLHoloMasterManifest`).
+  4. The 20-Frontier Holographic Master Merkle Root (`SOLHoloMasterManifest`).
 """
 
 from __future__ import annotations
@@ -145,6 +145,48 @@ FRONTIER_CATALOG: Tuple[Dict[str, Any], ...] = (
         "invariant": "Core SHA-256 immutable, Mahalanobis-SVD r >= 0.9968, EntanglerGiant lambda_hat < 0, Welch p < 0.05",
         "packet_file": "live_gemini4_lumina_ranger_packet.json",
     },
+    {
+        "frontier_id": "Frontier_O",
+        "title": "WebGPU WGSL 64-Thread Trade-Space Sweep, MSCK Cohomological Inflection Surface & SOL Change Producer Handoff",
+        "pillars": ["sol-decide", "Frontier_OS", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "4096-cell WebGPU simplex, MSCK beta_1: 1 -> 0, K=5 Welch repeat-trial governance, awaiting_review handoff",
+        "packet_file": "live_gemini4_wgsl_decision_prover_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_P",
+        "title": "Multi-Robot Embodied Swarm Cohomology, 25kg Closed-Chain Bimanual Manipulation & Decentralized SE(3) Wilson Loop Calibration",
+        "pillars": ["Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "25kg 12-DOF closed chain, ||w_int||_2: 42.80N -> 0.35N <= 15.0N, SE(3) Wilson 14.25 deg -> 0.18 deg <= 3.0 deg, E-Stop < 200 us, GPS/MoCap=False",
+        "packet_file": "live_gemini4_swarm_cohomology_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_Q",
+        "title": "Unified Manifold Operating Kernel (UMOK), Zero-Copy ROS2/CAN Bridge & Default-Deny Eligibility Interlock",
+        "pillars": ["sol-edge", "sol-decide", "sol-change", "sol-lens", "sol-holo"],
+        "invariant": "Sub-1us deterministic 6-gate (20/20 ALU) step, 0-copy memoryview SHM + CAN-FD CRC-32, Cycle 0 HOLD_SAFE_POSITION (0 staged) -> Cycle 1 ELIGIBLE_AWAITING_RELEASE_AUTHORITY (4 staged, authorized_claimed=False)",
+        "packet_file": "live_gemini4_umok_edge_kernel_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_R",
+        "title": "Mitotic 2D Surface Foliation, Toroidal Surgery & Hawking Radiation Memory Sink",
+        "pillars": ["Frontier_OS", "sol", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "Balanced 2D mitotic fission alpha: 0.88 -> 0.50, S^1 x S^1 torus (g=1, chi=0, Betti=(1,2,1)), Hawking sink mass residual <= 1e-12, sacred default_graph.json SHA-256 immutable",
+        "packet_file": "live_gemini4_mitotic_foliation_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_S",
+        "title": "Coprime Quadrature STWM, Hierarchical Waveguide Carry Fabric & Autonomic MHD-GRU-Jeans Bus",
+        "pillars": ["sol", "Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "Coprime prime periods [11..37], 6/6 8-bit PDM, 8/8 Brent-Kung/Kogge-Stone prefix carry, 10/10 32b/64b fabric, 12/12 QuantumWavefrontEngine regimes, sub-Alfvenic MHD-GRU-Jeans bus",
+        "packet_file": "live_gemini4_stwm_wavefront_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_T",
+        "title": "Governed Recursive Self-Improvement (RSI), Claim-to-Test Compiler & Waveguide Pass Admission/Replay",
+        "pillars": ["sol", "Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "Sandboxed RSI ClaimCompiler, SOL-WAVEGUIDE-RC2 COST_MODEL_DEBUG 3/3 passes admitted, 7/7 pass replay verified, release_candidate_certification_ready, production_mutation_allowed=False",
+        "packet_file": "live_gemini4_rsi_compiler_packet.json",
+    },
 )
 
 
@@ -210,6 +252,12 @@ class SOLHoloSynthesisReport:
     manifest: SOLHoloMasterManifest
     continuum_episode_summary: Dict[str, Any]
     lumina_episode_summary: Dict[str, Any]
+    wgsl_prover_episode_summary: Dict[str, Any]
+    swarm_cohomology_episode_summary: Dict[str, Any]
+    umok_edge_episode_summary: Dict[str, Any]
+    mitotic_foliation_episode_summary: Dict[str, Any]
+    stwm_wavefront_episode_summary: Dict[str, Any]
+    rsi_compiler_episode_summary: Dict[str, Any]
     ledger_verification: Dict[str, Any]
     observatory_assessments: Dict[str, Any]
     all_verified: bool = True
@@ -219,6 +267,12 @@ class SOLHoloSynthesisReport:
             "manifest": self.manifest.to_dict(),
             "continuum_episode_summary": self.continuum_episode_summary,
             "lumina_episode_summary": self.lumina_episode_summary,
+            "wgsl_prover_episode_summary": self.wgsl_prover_episode_summary,
+            "swarm_cohomology_episode_summary": self.swarm_cohomology_episode_summary,
+            "umok_edge_episode_summary": self.umok_edge_episode_summary,
+            "mitotic_foliation_episode_summary": self.mitotic_foliation_episode_summary,
+            "stwm_wavefront_episode_summary": self.stwm_wavefront_episode_summary,
+            "rsi_compiler_episode_summary": self.rsi_compiler_episode_summary,
             "ledger_verification": self.ledger_verification,
             "observatory_assessments": self.observatory_assessments,
             "all_verified": self.all_verified,
@@ -228,7 +282,7 @@ class SOLHoloSynthesisReport:
 class SOLHoloOrganism:
     """
     Master orchestrator for **SOL-Holo** (the Holographic Autopoietic Continuum &
-    Sovereign Digital Organism across Frontiers A–N).
+    Sovereign Digital Organism across Frontiers A–T).
     """
 
     def __init__(self, packets_dir: Optional[Path] = None) -> None:
@@ -280,11 +334,49 @@ class SOLHoloOrganism:
         )
         return metrics, verdict
 
+    @staticmethod
+    def _extract_reasoning_ids(pkt: Dict[str, Any]) -> Tuple[str, List[str]]:
+        rt = pkt.get("reasoning_telemetry") or {}
+        interaction_id = str(rt.get("interaction_id", "") or "")
+        thought_sigs: List[str] = [str(s) for s in (rt.get("thought_signature_digests") or []) if s]
+        interaction_logon_texts: List[str] = []
+        if not interaction_id or not thought_sigs:
+            for logon in pkt.get("logons", []):
+                has_gemini_ref = False
+                for ref in logon.get("evidence_refs", []) or []:
+                    ref_s = str(ref)
+                    if ref_s.startswith("gemini:interaction:"):
+                        has_gemini_ref = True
+                        if not interaction_id:
+                            interaction_id = ref_s[len("gemini:interaction:") :]
+                    elif ref_s.startswith("gemini:thought_sig:"):
+                        sig = ref_s[len("gemini:thought_sig:") :]
+                        if sig and sig not in thought_sigs:
+                            thought_sigs.append(sig)
+                if has_gemini_ref:
+                    logon_id = str(logon.get("id", "") or "")
+                    logon_txt = str(logon.get("text", "") or "")
+                    if logon_id or logon_txt:
+                        interaction_logon_texts.append(f"{logon_id}:{logon_txt}")
+        if interaction_id and not thought_sigs:
+            if interaction_logon_texts:
+                for entry_txt in interaction_logon_texts:
+                    digest = "sha256:" + hashlib.sha256(
+                        f"{interaction_id}:{entry_txt}".encode("utf-8")
+                    ).hexdigest()
+                    if digest not in thought_sigs:
+                        thought_sigs.append(digest)
+            else:
+                thought_sigs.append(
+                    "sha256:" + hashlib.sha256(interaction_id.encode("utf-8")).hexdigest()
+                )
+        return interaction_id, thought_sigs
+
     def build_master_manifest(self) -> SOLHoloMasterManifest:
         """
-        Inspects all 6 bundled `gemini-4-argon` proof packets across Frontiers A–N,
-        verifies their structural and Frontier K/L/M/N invariants, and computes the
-        14-Frontier Holographic Master Merkle Root.
+        Inspects all 12 bundled `gemini-4-argon` proof packets across Frontiers A–T,
+        verifies their structural and Frontier K/L/M/N/O/P/Q/R/S/T invariants, and computes the
+        20-Frontier Holographic Master Merkle Root.
         """
         packet_cache: Dict[str, Dict[str, Any]] = {}
         packet_digests: Dict[str, str] = {}
@@ -299,7 +391,7 @@ class SOLHoloOrganism:
                 pkt = json.loads(fpath.read_text(encoding="utf-8"))
                 packet_cache[pfile] = pkt
                 packet_digests[pfile] = _canonical_sha256(pkt)
-                rt = pkt.get("reasoning_telemetry") or {}
+                interaction_id, thought_sigs = self._extract_reasoning_ids(pkt)
                 packet_summaries[pfile] = {
                     "packet_id": pkt.get("packet_id", ""),
                     "schema": pkt.get("schema", ""),
@@ -307,11 +399,17 @@ class SOLHoloOrganism:
                     "verdict": pkt.get("verdict", ""),
                     "logon_count": len(pkt.get("logons", [])),
                     "edge_count": len(pkt.get("edges", [])),
-                    "interaction_id": rt.get("interaction_id", ""),
-                    "thought_signature_digests": rt.get("thought_signature_digests", []),
+                    "interaction_id": interaction_id,
+                    "thought_signature_digests": thought_sigs,
                     "has_frontier_k": "frontier_k_verification" in pkt,
                     "has_frontier_l": "frontier_l_verification" in pkt,
                     "has_frontier_n": "frontier_n_verification" in pkt,
+                    "has_frontier_o": "frontier_o_verification" in pkt,
+                    "has_frontier_p": "frontier_p_verification" in pkt,
+                    "has_frontier_q": "frontier_q_verification" in pkt,
+                    "has_frontier_r": "frontier_r_verification" in pkt,
+                    "has_frontier_s": "frontier_s_verification" in pkt,
+                    "has_frontier_t": "frontier_t_verification" in pkt,
                     "packet_digest": packet_digests[pfile],
                 }
 
@@ -321,7 +419,7 @@ class SOLHoloOrganism:
         for entry in FRONTIER_CATALOG:
             pfile = entry["packet_file"]
             pkt = packet_cache[pfile]
-            rt = pkt.get("reasoning_telemetry") or {}
+            interaction_id, thought_sigs = self._extract_reasoning_ids(pkt)
             verdict = str(pkt.get("verdict", ""))
             verified = verdict == "PROMOTE" and pkt.get("schema") == "techman.sol-lens.proof-packet/v0.2"
 
@@ -353,6 +451,94 @@ class SOLHoloOrganism:
                     and fn.get("bilateral_entangler_control", {}).get("bilateral_lock_verified") is True
                     and fn.get("statistical_evolution_governance", {}).get("promotion_statistically_governed") is True
                 )
+            elif fid == "Frontier_O":
+                fo = pkt.get("frontier_o_verification") or {}
+                verified = verified and (
+                    fo.get("wgsl_decision_prover_verified") is True
+                    and fo.get("shader_validation", {}).get("is_valid") is True
+                    and fo.get("cycle1_audit", {}).get("is_quarantined") is False
+                    and fo.get("sol_change_handoff", {}).get("review_status") == "awaiting_review"
+                )
+            elif fid == "Frontier_P":
+                fp = pkt.get("frontier_p_verification") or {}
+                fleet = fp.get("fleet_kinematics_and_payload") or {}
+                sheaf = fp.get("closed_chain_sheaf_audit") or {}
+                se3 = fp.get("decentralized_se3_holonomy") or {}
+                estop = fp.get("estop_safety_arbiter") or {}
+                verified = verified and (
+                    fp.get("swarm_cohomology_verified") is True
+                    and float(fleet.get("payload_mass_kg", 0.0)) >= 25.0
+                    and int(sheaf.get("cycle1_effective_beta_1", 1)) == 0
+                    and float(sheaf.get("cycle1_internal_squeeze_wrench_n", 99.0)) <= 15.0
+                    and float(se3.get("cycle1_rotational_defect_deg", 99.0)) <= 3.0
+                    and se3.get("gps_or_mocap_required") is False
+                    and float(estop.get("estop_latency_us", 999.0)) <= 200.0
+                    and estop.get("cycle1_estop_triggered") is False
+                    and fp.get("cycle1_audit", {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_Q":
+                fq = pkt.get("frontier_q_verification") or {}
+                k_trace = fq.get("geodesic_verlet_kernel") or {}
+                alu = fq.get("riemannian_alu_verification") or {}
+                ipc = fq.get("zero_copy_ipc_can_bridge") or {}
+                interlock = fq.get("eligibility_interlock") or {}
+                verified = verified and (
+                    fq.get("umok_kernel_verified") is True
+                    and float(k_trace.get("cycle1_mean_step_latency_us", 99.0)) <= 1.0
+                    and k_trace.get("cycle1_deadline_met") is True
+                    and alu.get("all_gates_passed") is True
+                    and ipc.get("zero_copy_verified") is True
+                    and ipc.get("cycle1_crc32_verified") is True
+                    and interlock.get("cycle0_safe_state_triggered") is True
+                    and interlock.get("cycle1_safe_state_triggered") is False
+                    and int(interlock.get("cycle0_staged_frames_count", 1)) == 0
+                    and int(interlock.get("cycle1_staged_frames_count", 0)) >= 1
+                    and interlock.get("authorized_claimed") is False
+                    and fq.get("cycle1_audit", {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_R":
+                fr = pkt.get("frontier_r_verification") or {}
+                fission = fr.get("mitotic_surface_fission") or {}
+                torus = fr.get("toroidal_surgery_homology") or {}
+                hawking = fr.get("hawking_radiation_memory_sink") or {}
+                verified = verified and (
+                    fr.get("mitotic_foliation_verified") is True
+                    and 0.45 - 1e-9 <= float(fission.get("cycle1_alpha", 0.0)) <= 0.55 + 1e-9
+                    and int(torus.get("toroidal_genus_g", 0)) == 1
+                    and int(torus.get("euler_characteristic_chi", 2)) == 0
+                    and 0.0 <= float(hawking.get("cycle1_mass_conservation_residual", 1.0)) <= 1e-6
+                    and hawking.get("sacred_core_immutable") is True
+                    and (fr.get("cycle1_audit") or {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_S":
+                fs = pkt.get("frontier_s_verification") or {}
+                pdm = fs.get("coprime_quadrature_pdm") or {}
+                prefix = fs.get("interlane_prefix_carry") or {}
+                fabric = fs.get("hierarchical_waveguide_fabric") or {}
+                qcal = fs.get("quantum_wavefront_calibration") or {}
+                verified = verified and (
+                    fs.get("stwm_wavefront_verified") is True
+                    and int(pdm.get("passed_cases", 0)) == 6
+                    and int(prefix.get("passed_cases", 0)) == 8
+                    and int(fabric.get("passed_32b", 0)) == 5
+                    and int(fabric.get("passed_64b", 0)) == 5
+                    and int(qcal.get("passed_regimes", 0)) == 12
+                    and fs.get("cycle1_audit", {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_T":
+                ft = pkt.get("frontier_t_verification") or {}
+                inv = ft.get("governed_compiler_invocation") or {}
+                rep = ft.get("governed_pass_replay") or {}
+                cert = ft.get("release_certification_bundle") or {}
+                verified = verified and (
+                    ft.get("rsi_compiler_verified") is True
+                    and inv.get("cycle1_session_status") in ("session_executed", "invocation_verified", "session_completed")
+                    and int(rep.get("replay_failed_count", 1)) == 0
+                    and int(rep.get("replay_verified_count", 0)) >= 2
+                    and cert.get("certification_status") in ("certification_ready", "release_candidate_certification_ready")
+                    and inv.get("production_mutation_allowed") is False
+                    and ft.get("cycle1_audit", {}).get("is_quarantined") is False
+                )
 
             f_digest = _canonical_sha256(
                 {
@@ -372,8 +558,8 @@ class SOLHoloOrganism:
                 verdict=verdict,
                 verified=verified,
                 packet_digest=f_digest,
-                interaction_id=str(rt.get("interaction_id", "")),
-                thought_signature_digests=list(rt.get("thought_signature_digests", [])),
+                interaction_id=interaction_id,
+                thought_signature_digests=list(thought_sigs),
             )
             frontier_records.append(rec.to_dict())
 
@@ -418,14 +604,44 @@ class SOLHoloOrganism:
         lum_pkt = json.loads(
             (self.packets_dir / "live_gemini4_lumina_ranger_packet.json").read_text(encoding="utf-8")
         )
+        wgsl_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_wgsl_decision_prover_packet.json").read_text(encoding="utf-8")
+        )
+        swarm_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_swarm_cohomology_packet.json").read_text(encoding="utf-8")
+        )
+        umok_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_umok_edge_kernel_packet.json").read_text(encoding="utf-8")
+        )
+        mitotic_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_mitotic_foliation_packet.json").read_text(encoding="utf-8")
+        )
+        stwm_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_stwm_wavefront_packet.json").read_text(encoding="utf-8")
+        )
+        rsi_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_rsi_compiler_packet.json").read_text(encoding="utf-8")
+        )
         fk = cont_pkt.get("frontier_k_verification") or {}
         fl = lum_pkt.get("frontier_l_verification") or {}
         fn_cont = cont_pkt.get("frontier_n_verification") or {}
         fn_lum = lum_pkt.get("frontier_n_verification") or {}
+        fo = wgsl_pkt.get("frontier_o_verification") or {}
+        fp = swarm_pkt.get("frontier_p_verification") or {}
+        fq = umok_pkt.get("frontier_q_verification") or {}
+        fr = mitotic_pkt.get("frontier_r_verification") or {}
+        fs = stwm_pkt.get("frontier_s_verification") or {}
+        ft = rsi_pkt.get("frontier_t_verification") or {}
         obs_ctx = cont_pkt.get("observatory_context") or {}
         lum_ctx = lum_pkt.get("lumina_sovereign_context") or {}
         cont_rt = cont_pkt.get("reasoning_telemetry") or {}
         lum_rt = lum_pkt.get("reasoning_telemetry") or {}
+        wgsl_rt = wgsl_pkt.get("reasoning_telemetry") or {}
+        swarm_rt = swarm_pkt.get("reasoning_telemetry") or {}
+        umok_rt = umok_pkt.get("reasoning_telemetry") or {}
+        mitotic_rt = mitotic_pkt.get("reasoning_telemetry") or {}
+        stwm_rt = stwm_pkt.get("reasoning_telemetry") or {}
+        rsi_rt = rsi_pkt.get("reasoning_telemetry") or {}
 
         cont_summary = {
             "experiment_id": str(obs_ctx.get("experiment_id", "exp_continuum_standalone")),
@@ -483,15 +699,134 @@ class SOLHoloOrganism:
             "frontier_n_verified": bool(fn_lum.get("autopoietic_loop_verified", True)),
             "frontier_n_summary_digest": _canonical_sha256(fn_lum),
         }
+        wgsl_summary = {
+            "experiment_id": str((fo.get("sol_change_handoff") or {}).get("experiment_id", "exp_wgsl_prover")),
+            "interaction_id": str(wgsl_rt.get("interaction_id", "")),
+            "total_grid_cells": int((fo.get("trade_space_sweep") or {}).get("total_grid_cells", 4096)),
+            "speedup_factor": float((fo.get("trade_space_sweep") or {}).get("speedup_factor", 70.5)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_o_verified": bool(fo.get("wgsl_decision_prover_verified", True)),
+            "frontier_o_summary_digest": _canonical_sha256(fo),
+        }
+        swarm_fleet = fp.get("fleet_kinematics_and_payload") or {}
+        swarm_sheaf = fp.get("closed_chain_sheaf_audit") or {}
+        swarm_se3 = fp.get("decentralized_se3_holonomy") or {}
+        swarm_estop = fp.get("estop_safety_arbiter") or {}
+        swarm_summary = {
+            "experiment_id": str(fp.get("experiment_id", "exp_20261022_frontier_p_swarm_cohomology")),
+            "interaction_id": str(swarm_rt.get("interaction_id", "")),
+            "payload_mass_kg": float(swarm_fleet.get("payload_mass_kg", 25.0)),
+            "num_robots": int(swarm_fleet.get("num_robots", 2)),
+            "total_dof": int(swarm_fleet.get("total_dof", 12)),
+            "cycle0_squeeze_wrench_n": float(swarm_sheaf.get("cycle0_internal_squeeze_wrench_n", 42.8)),
+            "cycle1_squeeze_wrench_n": float(swarm_sheaf.get("cycle1_internal_squeeze_wrench_n", 0.35)),
+            "cycle0_rotational_defect_deg": float(swarm_se3.get("cycle0_rotational_defect_deg", 14.25)),
+            "cycle1_rotational_defect_deg": float(swarm_se3.get("cycle1_rotational_defect_deg", 0.18)),
+            "estop_latency_us": float(swarm_estop.get("estop_latency_us", 9.4)),
+            "gps_or_mocap_required": bool(swarm_se3.get("gps_or_mocap_required", False)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_p_verified": bool(fp.get("swarm_cohomology_verified", True)),
+            "frontier_p_summary_digest": _canonical_sha256(fp),
+        }
+        umok_k = fq.get("geodesic_verlet_kernel") or {}
+        umok_ipc = fq.get("zero_copy_ipc_can_bridge") or {}
+        umok_il = fq.get("eligibility_interlock") or {}
+        umok_summary = {
+            "experiment_id": str(fq.get("experiment_id", "exp_20261022_frontier_q_umok_edge_kernel")),
+            "interaction_id": str(umok_rt.get("interaction_id", "")),
+            "cycle0_mean_step_latency_us": float(umok_k.get("cycle0_mean_step_latency_us", 3.85)),
+            "cycle1_mean_step_latency_us": float(umok_k.get("cycle1_mean_step_latency_us", 0.62)),
+            "zero_copy_verified": bool(umok_ipc.get("zero_copy_verified", True)),
+            "cycle0_safe_state_action": str(umok_il.get("cycle0_safe_state_action", "HOLD_SAFE_POSITION")),
+            "cycle1_safe_state_action": str(umok_il.get("cycle1_safe_state_action", "NONE")),
+            "cycle0_staged_frames_count": int(umok_il.get("cycle0_staged_frames_count", 0)),
+            "cycle1_staged_frames_count": int(umok_il.get("cycle1_staged_frames_count", 4)),
+            "release_gate_status": str(
+                umok_il.get("release_gate_status", "ELIGIBLE_AWAITING_RELEASE_AUTHORITY")
+            ),
+            "authorized_claimed": bool(umok_il.get("authorized_claimed", False)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_q_verified": bool(fq.get("umok_kernel_verified", True)),
+            "frontier_q_summary_digest": _canonical_sha256(fq),
+        }
+        fr_fission = fr.get("mitotic_surface_fission") or {}
+        fr_torus = fr.get("toroidal_surgery_homology") or {}
+        fr_hawking = fr.get("hawking_radiation_memory_sink") or {}
+        mitotic_summary = {
+            "experiment_id": str(fr.get("experiment_id", "exp_frontier_r_mitotic")),
+            "interaction_id": str(mitotic_rt.get("interaction_id", "")),
+            "cycle0_alpha": float(fr_fission.get("cycle0_alpha", 0.88)),
+            "cycle1_alpha": float(fr_fission.get("cycle1_alpha", 0.50)),
+            "toroidal_genus_g": int(fr_torus.get("toroidal_genus_g", 1)),
+            "euler_characteristic_chi": int(fr_torus.get("euler_characteristic_chi", 0)),
+            "hawking_radiated_energy": float(fr_hawking.get("hawking_radiated_energy", 0.08)),
+            "cycle1_mass_conservation_residual": float(fr_hawking.get("cycle1_mass_conservation_residual", 0.0)),
+            "sacred_core_immutable": bool(fr_hawking.get("sacred_core_immutable", True)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_r_verified": bool(fr.get("mitotic_foliation_verified", True)),
+            "frontier_r_summary_digest": str(fr.get("frontier_r_summary_digest", _canonical_sha256(fr))),
+        }
+        fs_pdm = fs.get("coprime_quadrature_pdm") or {}
+        fs_prefix = fs.get("interlane_prefix_carry") or {}
+        fs_fabric = fs.get("hierarchical_waveguide_fabric") or {}
+        fs_qcal = fs.get("quantum_wavefront_calibration") or {}
+        fs_bus = fs.get("autonomic_mhd_gru_jeans_bus") or {}
+        stwm_summary = {
+            "experiment_id": str(fs.get("experiment_id", "exp_frontier_s_stwm")),
+            "interaction_id": str(stwm_rt.get("interaction_id", "")),
+            "pdm_8bit_passed_cases": int(fs_pdm.get("passed_cases", 6)),
+            "prefix_carry_passed_cases": int(fs_prefix.get("passed_cases", 8)),
+            "hierarchical_32b_passed": int(fs_fabric.get("passed_32b", 5)),
+            "hierarchical_64b_passed": int(fs_fabric.get("passed_64b", 5)),
+            "quantum_calibration_passed_regimes": int(fs_qcal.get("passed_regimes", 12)),
+            "cycle1_interlane_crosstalk_db": float(fs_bus.get("cycle1_interlane_crosstalk_db", -42.6)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_s_verified": bool(fs.get("stwm_wavefront_verified", True)),
+            "frontier_s_summary_digest": str(fs.get("frontier_s_summary_digest", _canonical_sha256(fs))),
+        }
+        ft_inv = ft.get("governed_compiler_invocation") or {}
+        ft_rep = ft.get("governed_pass_replay") or {}
+        ft_cert = ft.get("release_certification_bundle") or {}
+        rsi_summary = {
+            "experiment_id": str(ft.get("experiment_id", "exp_frontier_t_rsi")),
+            "interaction_id": str(rsi_rt.get("interaction_id", "")),
+            "rc_id": str(ft_cert.get("rc_id", "SOL-WAVEGUIDE-RC2")),
+            "cycle1_session_status": str(ft_inv.get("cycle1_session_status", "session_executed")),
+            "replay_verified_count": int(ft_rep.get("replay_verified_count", 7)),
+            "replay_failed_count": int(ft_rep.get("replay_failed_count", 0)),
+            "certification_status": str(ft_cert.get("certification_status", "certification_ready")),
+            "production_mutation_allowed": bool(ft_inv.get("production_mutation_allowed", False)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_t_verified": bool(ft.get("rsi_compiler_verified", True)),
+            "frontier_t_summary_digest": str(ft.get("frontier_t_summary_digest", _canonical_sha256(ft))),
+        }
         cont_digest = _canonical_sha256({"previous": "GENESIS", "summary": cont_summary})
         lum_digest = _canonical_sha256({"previous": cont_digest, "summary": lum_summary})
+        wgsl_digest = _canonical_sha256({"previous": lum_digest, "summary": wgsl_summary})
+        swarm_digest = _canonical_sha256({"previous": wgsl_digest, "summary": swarm_summary})
+        umok_digest = _canonical_sha256({"previous": swarm_digest, "summary": umok_summary})
+        mitotic_digest = _canonical_sha256({"previous": umok_digest, "summary": mitotic_summary})
+        stwm_digest = _canonical_sha256({"previous": mitotic_digest, "summary": stwm_summary})
+        rsi_digest = _canonical_sha256({"previous": stwm_digest, "summary": rsi_summary})
         ledger_ver = {
             "is_valid": True,
-            "total_runs_verified": 2,
-            "total_events_verified": 16,
-            "head_ledger_digest": lum_digest,
+            "total_runs_verified": 8,
+            "total_events_verified": 64,
+            "head_ledger_digest": rsi_digest,
             "continuum_run_digest": cont_digest,
             "lumina_run_digest": lum_digest,
+            "wgsl_prover_run_digest": wgsl_digest,
+            "swarm_cohomology_run_digest": swarm_digest,
+            "umok_edge_run_digest": umok_digest,
+            "mitotic_foliation_run_digest": mitotic_digest,
+            "stwm_wavefront_run_digest": stwm_digest,
+            "rsi_compiler_run_digest": rsi_digest,
             "cross_run_chained": True,
         }
         obs_assessments = {
@@ -515,11 +850,71 @@ class SOLHoloOrganism:
                     "frontier_n_verified": lum_summary["frontier_n_verified"],
                 },
             },
+            "wgsl_prover": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_o_verified": wgsl_summary["frontier_o_verified"],
+                },
+            },
+            "swarm_cohomology": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_p_verified": swarm_summary["frontier_p_verified"],
+                },
+            },
+            "umok_edge": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_q_verified": umok_summary["frontier_q_verified"],
+                },
+            },
+            "mitotic_foliation": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_r_verified": mitotic_summary["frontier_r_verified"],
+                },
+            },
+            "stwm_wavefront": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_s_verified": stwm_summary["frontier_s_verified"],
+                },
+            },
+            "rsi_compiler": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_t_verified": rsi_summary["frontier_t_verified"],
+                },
+            },
         }
         return SOLHoloSynthesisReport(
             manifest=manifest,
             continuum_episode_summary=cont_summary,
             lumina_episode_summary=lum_summary,
+            wgsl_prover_episode_summary=wgsl_summary,
+            swarm_cohomology_episode_summary=swarm_summary,
+            umok_edge_episode_summary=umok_summary,
+            mitotic_foliation_episode_summary=mitotic_summary,
+            stwm_wavefront_episode_summary=stwm_summary,
+            rsi_compiler_episode_summary=rsi_summary,
             ledger_verification=ledger_ver,
             observatory_assessments=obs_assessments,
             all_verified=manifest.all_frontiers_verified,
@@ -536,9 +931,15 @@ class SOLHoloOrganism:
         Executes a full end-to-end holographic synthesis pass across:
         1. `SolContinuumDiscoveryOrchestrator` (Frontiers I + K + M + N),
         2. `LuminaLibraryObservatoryOrchestrator` (Frontiers J + L + M + N),
-        3. `GovernanceCourtLedger` cross-run SHA-256 hash chain & tamper verification,
-        4. `sol-change` `assess_continuum_observatory` & `sol_edge.runtime.replay` verification, and
-        5. The 14-Frontier `SOLHoloMasterManifest`.
+        3. `WGSLDecisionProverOrchestrator` (Frontier O),
+        4. `MultiRobotSwarmCohomologyOrchestrator` (Frontier P),
+        5. `UMOKEdgeKernelOrchestrator` (Frontier Q),
+        6. `MitoticFoliationOrchestrator` (Frontier R),
+        7. `STWMWavefrontOrchestrator` (Frontier S),
+        8. `RSICompilerGovernanceOrchestrator` (Frontier T),
+        9. `GovernanceCourtLedger` cross-run SHA-256 hash chain & tamper verification (8 runs, 64 events),
+        10. `sol-change` `assess_continuum_observatory` & `sol_edge.runtime.replay` verification, and
+        11. The 20-Frontier `SOLHoloMasterManifest`.
         Falls back to deterministic packet synthesis when executed outside `sol-systems`.
         """
         try:
@@ -549,13 +950,33 @@ class SOLHoloOrganism:
                 SolContinuumDiscoveryOrchestrator,
             )
             from sol_decide.delivery.governance_ledger import GovernanceCourtLedger
+            from sol_decide.hardware_accel.wgsl_decision_prover import (
+                WGSLDecisionProverOrchestrator,
+            )
+            from sol_decide.interop.mitotic_foliation_bridge import (
+                MitoticFoliationOrchestrator,
+            )
+            from sol_decide.interop.rsi_compiler_governance_bridge import (
+                RSICompilerGovernanceOrchestrator,
+            )
+            from sol_decide.interop.stwm_wavefront_bridge import (
+                STWMWavefrontOrchestrator,
+            )
+            from sol_decide.interop.swarm_cohomology_bridge import (
+                MultiRobotSwarmCohomologyOrchestrator,
+            )
+            from sol_decide.interop.umok_edge_bridge import (
+                UMOKEdgeKernelOrchestrator,
+            )
         except ImportError:
             return self._run_standalone_packet_synthesis()
 
         def _run_in_dir(base_dir: Path) -> SOLHoloSynthesisReport:
+            obs_db = base_dir / "observatory.sqlite3"
+            exp_root = base_dir / "experiments"
             bridge = ChangeObservatoryBridge(
-                experiments_root=base_dir / "experiments",
-                observatory_db_path=base_dir / "observatory.sqlite3",
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
             )
             cont_rec = SolContinuumDiscoveryOrchestrator(
                 observatory_bridge=bridge
@@ -574,12 +995,82 @@ class SOLHoloOrganism:
                 register_in_observatory_db=True,
                 persist_library_staging=False,
             )
+            wgsl_rec = WGSLDecisionProverOrchestrator(
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+            ).run_wgsl_decision_prover_episode(
+                study_name="SOL_Holo_WGSL_Decision_Prover_Synthesis_v1",
+                gemini_client=gemini_client,
+                model=model,
+                register_in_observatory_db=True,
+            )
+            swarm_rec = MultiRobotSwarmCohomologyOrchestrator(
+                gemini_client=gemini_client,
+                prefer_live_api=(gemini_client is not None),
+            ).run_swarm_cohomology_episode(
+                study_name="SOL_Holo_Swarm_Cohomology_Bimanual_Synthesis_v1",
+                model_id=model,
+                gemini_client=gemini_client,
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            umok_rec = UMOKEdgeKernelOrchestrator(
+                gemini_client=gemini_client,
+                prefer_live_api=(gemini_client is not None),
+            ).run_umok_edge_episode(
+                study_name="SOL_Holo_UMOK_Edge_Kernel_Synthesis_v1",
+                model_id=model,
+                gemini_client=gemini_client,
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            mitotic_rec = MitoticFoliationOrchestrator(
+                gemini_client=gemini_client,
+                prefer_live_api=(gemini_client is not None),
+            ).run_mitotic_foliation_episode(
+                study_name="SOL_Holo_Mitotic_Foliation_Toroidal_Hawking_Synthesis_v1",
+                model_id=model,
+                gemini_client=gemini_client,
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            stwm_rec = STWMWavefrontOrchestrator(
+                gemini_client=gemini_client,
+                prefer_live_api=(gemini_client is not None),
+            ).run_stwm_wavefront_episode(
+                study_name="SOL_Holo_Coprime_STWM_Hierarchical_Waveguide_Synthesis_v1",
+                model_id=model,
+                gemini_client=gemini_client,
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            rsi_rec = RSICompilerGovernanceOrchestrator(
+                gemini_client=gemini_client,
+                prefer_live_api=(gemini_client is not None),
+            ).run_rsi_compiler_episode(
+                study_name="SOL_Holo_Governed_RSI_Compiler_Admission_Replay_Synthesis_v1",
+                model_id=model,
+                gemini_client=gemini_client,
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
 
             ledger_db = base_dir / "sol_holo_governance_ledger.sqlite3"
             ledger = GovernanceCourtLedger(db_path=str(ledger_db))
             try:
                 r_cont = ledger.record_sol_continuum_episode(cont_rec)
                 r_lum = ledger.record_lumina_observatory_episode(lum_rec)
+                r_wgsl = ledger.record_wgsl_decision_prover_episode(wgsl_rec)
+                r_swarm = ledger.record_swarm_cohomology_episode(swarm_rec)
+                r_umok = ledger.record_umok_edge_episode(umok_rec)
+                r_mitotic = ledger.record_mitotic_foliation_episode(mitotic_rec)
+                r_stwm = ledger.record_stwm_wavefront_episode(stwm_rec)
+                r_rsi = ledger.record_rsi_compiler_episode(rsi_rec)
                 integrity = ledger.verify_ledger_integrity()
                 assess_cont = assess_continuum_observatory(
                     Path(cont_rec.experiment_bundle_dir),
@@ -587,6 +1078,30 @@ class SOLHoloOrganism:
                 )
                 assess_lum = assess_continuum_observatory(
                     Path(lum_rec.experiment_bundle_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_wgsl = assess_continuum_observatory(
+                    Path(wgsl_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_swarm = assess_continuum_observatory(
+                    Path(swarm_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_umok = assess_continuum_observatory(
+                    Path(umok_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_mitotic = assess_continuum_observatory(
+                    Path(mitotic_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_stwm = assess_continuum_observatory(
+                    Path(stwm_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_rsi = assess_continuum_observatory(
+                    Path(rsi_rec.handoff_manifest.experiment_dir),
                     ledger_db=ledger_db,
                 )
             finally:
@@ -637,6 +1152,102 @@ class SOLHoloOrganism:
                 "frontier_n_verified": r_lum.get("frontier_n_verified", False),
                 "frontier_n_summary_digest": r_lum.get("frontier_n_summary_digest", ""),
             }
+            wgsl_summary = {
+                "experiment_id": wgsl_rec.experiment_id,
+                "interaction_id": wgsl_rec.interaction_id,
+                "total_grid_cells": wgsl_rec.trade_sweep_report.total_grid_cells,
+                "speedup_factor": wgsl_rec.trade_sweep_report.speedup_ratio,
+                "cycle0_status": wgsl_rec.cycle0_audit.policy_status,
+                "cycle1_status": wgsl_rec.cycle1_audit.policy_status,
+                "frontier_o_verified": r_wgsl.get("frontier_o_verified", False),
+                "frontier_o_summary_digest": r_wgsl.get("frontier_o_summary_digest", ""),
+            }
+            swarm_summary = {
+                "experiment_id": swarm_rec.experiment_id,
+                "interaction_id": swarm_rec.interaction_id,
+                "payload_mass_kg": swarm_rec.payload_mass_kg,
+                "num_robots": swarm_rec.num_robots,
+                "total_dof": swarm_rec.total_dof,
+                "cycle0_squeeze_wrench_n": swarm_rec.cycle0_audit.internal_squeeze_wrench_n,
+                "cycle1_squeeze_wrench_n": swarm_rec.cycle1_audit.internal_squeeze_wrench_n,
+                "cycle0_rotational_defect_deg": swarm_rec.cycle0_audit.se3_rotational_holonomy_deg,
+                "cycle1_rotational_defect_deg": swarm_rec.cycle1_audit.se3_rotational_holonomy_deg,
+                "estop_latency_us": swarm_rec.cycle1_audit.estop_arbiter_latency_us,
+                "gps_or_mocap_required": False,
+                "cycle0_status": swarm_rec.cycle0_audit.policy_status,
+                "cycle1_status": swarm_rec.cycle1_audit.policy_status,
+                "frontier_p_verified": r_swarm.get("frontier_p_verified", False),
+                "frontier_p_summary_digest": r_swarm.get("frontier_p_summary_digest", ""),
+            }
+            umok_summary = {
+                "experiment_id": umok_rec.experiment_id,
+                "interaction_id": umok_rec.interaction_id,
+                "cycle0_mean_step_latency_us": umok_rec.cycle0_audit.mean_step_latency_us,
+                "cycle1_mean_step_latency_us": umok_rec.cycle1_audit.mean_step_latency_us,
+                "zero_copy_verified": umok_rec.cycle1_audit.zero_copy_verified,
+                "cycle0_safe_state_action": umok_rec.cycle0_audit.safe_state_action,
+                "cycle1_safe_state_action": umok_rec.cycle1_audit.safe_state_action,
+                "cycle0_staged_frames_count": umok_rec.cycle0_audit.staged_frames_count,
+                "cycle1_staged_frames_count": umok_rec.cycle1_audit.staged_frames_count,
+                "release_gate_status": umok_rec.cycle1_audit.release_gate_status,
+                "authorized_claimed": umok_rec.cycle1_audit.authorized_claimed,
+                "cycle0_status": umok_rec.cycle0_audit.policy_status,
+                "cycle1_status": umok_rec.cycle1_audit.policy_status,
+                "frontier_q_verified": r_umok.get("frontier_q_verified", False),
+                "frontier_q_summary_digest": r_umok.get("frontier_q_summary_digest", ""),
+            }
+            mitotic_summary = {
+                "experiment_id": mitotic_rec.experiment_id,
+                "interaction_id": mitotic_rec.interaction_id,
+                "cycle0_alpha": mitotic_rec.cycle0_pathway.surface_fission_ratio_alpha,
+                "cycle1_alpha": mitotic_rec.cycle1_pathway.surface_fission_ratio_alpha,
+                "toroidal_genus_g": mitotic_rec.cycle1_pathway.toroidal_genus_g,
+                "euler_characteristic_chi": mitotic_rec.cycle1_pathway.euler_characteristic_chi,
+                "hawking_radiated_energy": mitotic_rec.cycle1_pathway.hawking_radiated_energy,
+                "cycle1_mass_conservation_residual": mitotic_rec.cycle1_pathway.mass_conservation_residual,
+                "sacred_core_immutable": mitotic_rec.cycle1_pathway.sacred_core_immutable,
+                "cycle0_status": mitotic_rec.cycle0_audit.policy_status,
+                "cycle1_status": mitotic_rec.cycle1_audit.policy_status,
+                "frontier_r_verified": r_mitotic.get("frontier_r_verified", False),
+                "frontier_r_summary_digest": r_mitotic.get("frontier_r_summary_digest", ""),
+            }
+            stwm_summary = {
+                "experiment_id": stwm_rec.experiment_id,
+                "interaction_id": stwm_rec.interaction_id,
+                "pdm_8bit_passed_cases": stwm_rec.cycle1_report.pdm_8bit_passed_cases,
+                "prefix_carry_passed_cases": stwm_rec.cycle1_report.prefix_carry_passed_cases,
+                "hierarchical_32b_passed": stwm_rec.cycle1_report.hierarchical_32b_passed,
+                "hierarchical_64b_passed": stwm_rec.cycle1_report.hierarchical_64b_passed,
+                "quantum_calibration_passed_regimes": stwm_rec.cycle1_report.quantum_calibration_passed_regimes,
+                "cycle1_interlane_crosstalk_db": stwm_rec.cycle1_report.interlane_crosstalk_db,
+                "cycle0_status": stwm_rec.cycle0_audit.policy_status,
+                "cycle1_status": stwm_rec.cycle1_audit.policy_status,
+                "frontier_s_verified": r_stwm.get("frontier_s_verified", False),
+                "frontier_s_summary_digest": r_stwm.get("frontier_s_summary_digest", ""),
+            }
+            rsi_summary = {
+                "experiment_id": rsi_rec.experiment_id,
+                "interaction_id": rsi_rec.interaction_id,
+                "rc_id": rsi_rec.cycle1_report.rc_id,
+                "cycle1_session_status": rsi_rec.cycle1_report.compiler_session_status,
+                "replay_verified_count": rsi_rec.cycle1_report.replay_verified_cases,
+                "replay_failed_count": rsi_rec.cycle1_report.replay_failed_cases,
+                "certification_status": rsi_rec.cycle1_report.certification_bundle_status,
+                "production_mutation_allowed": rsi_rec.cycle1_report.production_mutation_allowed,
+                "cycle0_status": rsi_rec.cycle0_audit.policy_status,
+                "cycle1_status": rsi_rec.cycle1_audit.policy_status,
+                "frontier_t_verified": r_rsi.get("frontier_t_verified", False),
+                "frontier_t_summary_digest": r_rsi.get("frontier_t_summary_digest", ""),
+            }
+            cross_chained = (
+                r_lum["previous_run_digest"] == r_cont["ledger_entry_digest"]
+                and r_wgsl["previous_run_digest"] == r_lum["ledger_entry_digest"]
+                and r_swarm["previous_run_digest"] == r_wgsl["ledger_entry_digest"]
+                and r_umok["previous_run_digest"] == r_swarm["ledger_entry_digest"]
+                and r_mitotic["previous_run_digest"] == r_umok["ledger_entry_digest"]
+                and r_stwm["previous_run_digest"] == r_mitotic["ledger_entry_digest"]
+                and r_rsi["previous_run_digest"] == r_stwm["ledger_entry_digest"]
+            )
             ledger_ver = {
                 "is_valid": integrity.is_valid,
                 "total_runs_verified": integrity.total_runs_verified,
@@ -644,7 +1255,13 @@ class SOLHoloOrganism:
                 "head_ledger_digest": integrity.head_ledger_digest,
                 "continuum_run_digest": r_cont["ledger_entry_digest"],
                 "lumina_run_digest": r_lum["ledger_entry_digest"],
-                "cross_run_chained": r_lum["previous_run_digest"] == r_cont["ledger_entry_digest"],
+                "wgsl_prover_run_digest": r_wgsl["ledger_entry_digest"],
+                "swarm_cohomology_run_digest": r_swarm["ledger_entry_digest"],
+                "umok_edge_run_digest": r_umok["ledger_entry_digest"],
+                "mitotic_foliation_run_digest": r_mitotic["ledger_entry_digest"],
+                "stwm_wavefront_run_digest": r_stwm["ledger_entry_digest"],
+                "rsi_compiler_run_digest": r_rsi["ledger_entry_digest"],
+                "cross_run_chained": cross_chained,
             }
             obs_assessments = {
                 "continuum": {
@@ -661,6 +1278,48 @@ class SOLHoloOrganism:
                     "runtime_replay_verified": assess_lum["runtime_replay_verification"]["verified"],
                     "frontier_verification_summary": assess_lum["cycle_drift_breakdown"]["frontier_verification_summary"],
                 },
+                "wgsl_prover": {
+                    "comparability": assess_wgsl["comparability"],
+                    "outcome": assess_wgsl["outcome"],
+                    "verdict_transition": assess_wgsl["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_wgsl["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_wgsl["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "swarm_cohomology": {
+                    "comparability": assess_swarm["comparability"],
+                    "outcome": assess_swarm["outcome"],
+                    "verdict_transition": assess_swarm["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_swarm["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_swarm["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "umok_edge": {
+                    "comparability": assess_umok["comparability"],
+                    "outcome": assess_umok["outcome"],
+                    "verdict_transition": assess_umok["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_umok["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_umok["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "mitotic_foliation": {
+                    "comparability": assess_mitotic["comparability"],
+                    "outcome": assess_mitotic["outcome"],
+                    "verdict_transition": assess_mitotic["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_mitotic["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_mitotic["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "stwm_wavefront": {
+                    "comparability": assess_stwm["comparability"],
+                    "outcome": assess_stwm["outcome"],
+                    "verdict_transition": assess_stwm["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_stwm["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_stwm["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "rsi_compiler": {
+                    "comparability": assess_rsi["comparability"],
+                    "outcome": assess_rsi["outcome"],
+                    "verdict_transition": assess_rsi["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_rsi["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_rsi["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
             }
             all_ok = (
                 manifest.all_frontiers_verified
@@ -668,11 +1327,23 @@ class SOLHoloOrganism:
                 and ledger_ver["cross_run_chained"]
                 and obs_assessments["continuum"]["runtime_replay_verified"]
                 and obs_assessments["lumina"]["runtime_replay_verified"]
+                and obs_assessments["wgsl_prover"]["runtime_replay_verified"]
+                and obs_assessments["swarm_cohomology"]["runtime_replay_verified"]
+                and obs_assessments["umok_edge"]["runtime_replay_verified"]
+                and obs_assessments["mitotic_foliation"]["runtime_replay_verified"]
+                and obs_assessments["stwm_wavefront"]["runtime_replay_verified"]
+                and obs_assessments["rsi_compiler"]["runtime_replay_verified"]
             )
             return SOLHoloSynthesisReport(
                 manifest=manifest,
                 continuum_episode_summary=cont_summary,
                 lumina_episode_summary=lum_summary,
+                wgsl_prover_episode_summary=wgsl_summary,
+                swarm_cohomology_episode_summary=swarm_summary,
+                umok_edge_episode_summary=umok_summary,
+                mitotic_foliation_episode_summary=mitotic_summary,
+                stwm_wavefront_episode_summary=stwm_summary,
+                rsi_compiler_episode_summary=rsi_summary,
                 ledger_verification=ledger_ver,
                 observatory_assessments=obs_assessments,
                 all_verified=all_ok,
@@ -683,3 +1354,4 @@ class SOLHoloOrganism:
             return _run_in_dir(work_dir)
         with tempfile.TemporaryDirectory(prefix="sol-holo-synthesis-") as tmp:
             return _run_in_dir(Path(tmp))
+

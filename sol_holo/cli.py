@@ -21,14 +21,14 @@ from .holo_engine import SOLHoloOrganism
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="sol-holo",
-        description="SOL-Holo: Holographic Autopoietic Continuum & Sovereign Digital Organism (Frontiers A-T)",
+        description="SOL-Holo: Holographic Autopoietic Continuum & Sovereign Digital Organism (Frontiers A-Z)",
     )
     sub = parser.add_subparsers(dest="command", required=False)
 
-    p_man = sub.add_parser("manifest", help="Build and verify the 20-Frontier Holographic Master Manifest")
+    p_man = sub.add_parser("manifest", help="Build and verify the 26-Frontier Holographic Master Manifest")
     p_man.add_argument("--output", type=Path, default=None, help="Optional JSON path to write manifest")
 
-    p_syn = sub.add_parser("synthesize", help="Run full SOL-Holo synthesis across Continuum + Lumina + Frontiers O/P/Q/R/S/T + Ledger")
+    p_syn = sub.add_parser("synthesize", help="Run full SOL-Holo synthesis across Continuum + Lumina + Frontiers O/P/Q/R/S/T/U/V/W/X/Y/Z + Ledger")
     p_syn.add_argument("--live", action="store_true", help="Use live gemini-4-argon API if GEMINI_API_KEY is set")
     p_syn.add_argument("--model", type=str, default="gemini-4-argon", help="Model identifier")
     p_syn.add_argument("--output-manifest", type=Path, default=None, help="Optional path to save master manifest")

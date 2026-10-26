@@ -2,13 +2,15 @@
 Test suite for `SOL-Holo` (`c:\\sol-systems\\sol-holo`).
 
 Verifies:
-1. All 20 Frontiers (`Frontier_A` through `Frontier_T`) in `SOLHoloMasterManifest`
+1. All 26 Frontiers (`Frontier_A` through `Frontier_Z`) in `SOLHoloMasterManifest`
    validate cleanly with a deterministic SHA-256 `holographic_merkle_root` and
    intact sacred core graph SHA-256 (`d0a80462d2b9389160502b097aca1932bb014941adf6e4b77799997283e4a1bc`).
-2. `SOLHoloOrganism.run_holographic_synthesis()` executes all 8 synthesis branches
+2. `SOLHoloOrganism.run_holographic_synthesis()` executes all 14 synthesis branches
    (Continuum, Lumina, WGSL Prover, Swarm Cohomology, UMOK Edge, Mitotic Foliation,
-   STWM Wavefront, and RSI Compiler Governance), chains them into `GovernanceCourtLedger`
-   (8 runs, 64 `sol-edge` events), and verifies `sol-change` observatory drift and
+   STWM Wavefront, RSI Compiler Governance, HCAM Shard Consensus, Waveguide SIMD Pipeline,
+   Burn-In Attestation, Entangled Cadence Wavefront, Waveguide Channel Staging, and
+   Sovereign Court Lockdown), chains them into `GovernanceCourtLedger`
+   (14 runs, 112 `sol-edge` events), and verifies `sol-change` observatory drift and
    `sol_edge.runtime.replay` parity.
 3. `sol_holo.cli` (`manifest` and `synthesize` subcommands) exits with code 0.
 """
@@ -17,6 +19,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import shutil
 import sys
 
 _THIS_FILE = Path(__file__).resolve()
@@ -48,8 +51,8 @@ def test_sol_holo_20_frontier_master_manifest() -> None:
     manifest = organism.build_master_manifest()
 
     assert manifest.schema == "techman.sol-holo.master-manifest/v1.0"
-    assert manifest.total_frontiers == 20
-    assert len(FRONTIER_CATALOG) == 20
+    assert manifest.total_frontiers == 26
+    assert len(FRONTIER_CATALOG) == 26
     assert manifest.all_frontiers_verified is True
     assert manifest.holographic_merkle_root.startswith("sha256:")
     assert manifest.sacred_core_immutability_verified is True
@@ -59,7 +62,7 @@ def test_sol_holo_20_frontier_master_manifest() -> None:
     )
 
     frontier_ids = [f["frontier_id"] for f in manifest.frontiers]
-    expected_ids = [f"Frontier_{chr(ord('A') + i)}" for i in range(20)]
+    expected_ids = [f"Frontier_{chr(ord('A') + i)}" for i in range(26)]
     assert frontier_ids == expected_ids
     for f in manifest.frontiers:
         assert f["verified"] is True
@@ -82,7 +85,7 @@ def test_sol_holo_end_to_end_synthesis(tmp_path: Path) -> None:
 
     assert report.all_verified is True
     assert report.manifest.all_frontiers_verified is True
-    assert report.manifest.total_frontiers == 20
+    assert report.manifest.total_frontiers == 26
 
     # Continuum branch (Frontiers I + K + M + N)
     cont = report.continuum_episode_summary
@@ -177,11 +180,80 @@ def test_sol_holo_end_to_end_synthesis(tmp_path: Path) -> None:
     assert rsi["cycle1_status"] == "ELIGIBLE"
     assert rsi["frontier_t_verified"] is True
 
-    # Cross-run GovernanceCourtLedger & sol-change replay (8 runs, 64 events)
+    # HCAM Shard Consensus branch (Frontier U)
+    hcam = report.hcam_shard_episode_summary
+    assert hcam["banks_32b"] == 4
+    assert hcam["banks_64b"] == 8
+    assert hcam["shard_count"] == 4
+    assert hcam["cycle1_local_quorum_shards"] >= 3
+    assert hcam["orphan_nodes_reclaimed"] >= 1
+    assert hcam["live_root_reclaimed"] is False
+    assert hcam["cycle0_status"] == "QUARANTINE"
+    assert hcam["cycle1_status"] == "ELIGIBLE"
+    assert hcam["frontier_u_verified"] is True
+
+    # Waveguide SIMD Pipeline branch (Frontier V)
+    wsimd = report.waveguide_simd_episode_summary
+    assert wsimd["predicated_diamonds_converted"] >= 1
+    assert wsimd["flags_externally_visible"] is False
+    assert wsimd["assembled_core_count"] == 4
+    assert wsimd["simd_lane_width"] in (4, 64)
+    assert wsimd["fault_matrix_passed_cases"] >= 5
+    assert wsimd["cycle0_status"] == "QUARANTINE"
+    assert wsimd["cycle1_status"] == "ELIGIBLE"
+    assert wsimd["frontier_v_verified"] is True
+
+    # Burn-In Attestation branch (Frontier W)
+    burnin = report.burnin_attestation_episode_summary
+    assert burnin["cycles_executed"] >= 6
+    assert burnin["ready_verification_steps"] >= 5
+    assert burnin["real_signature_claimed"] is False
+    assert burnin["network_access_used"] is False
+    assert burnin["cycle0_status"] == "QUARANTINE"
+    assert burnin["cycle1_status"] == "ELIGIBLE"
+    assert burnin["frontier_w_verified"] is True
+
+    # Entangled Cadence Wavefront branch (Frontier X)
+    ecw = report.entangled_cadence_episode_summary
+    assert ecw["manifold_count"] == 4
+    assert ecw["group_coherence"] >= 0.99
+    assert ecw["post_sync_max_skew"] <= 0.05
+    assert ecw["autonomy_bounded"] is True
+    assert ecw["alignment_score"] >= 0.99
+    assert ecw["cycle0_status"] == "QUARANTINE"
+    assert ecw["cycle1_status"] == "ELIGIBLE"
+    assert ecw["frontier_x_verified"] is True
+
+    # Waveguide Channel Staging branch (Frontier Y)
+    wcs = report.waveguide_channel_staging_episode_summary
+    assert wcs["recognized_kernels_count"] == 5
+    assert wcs["raw_hazard_detected_on_conflict"] is True
+    assert wcs["crosstalk_reduction"] > 0.0
+    assert wcs["noop_dry_run_events_count"] == 182
+    assert wcs["local_staging_copied_files"] == 28
+    assert wcs["physical_execution_permitted_by_gate"] is False
+    assert wcs["cycle0_status"] == "QUARANTINE"
+    assert wcs["cycle1_status"] == "ELIGIBLE"
+    assert wcs["frontier_y_verified"] is True
+
+    # Sovereign Court Lockdown branch (Frontier Z)
+    scl = report.sovereign_court_lockdown_episode_summary
+    assert scl["registered_gates_count"] == 11
+    assert scl["passed_gates_count"] == 11
+    assert scl["finalization_evidence_items_count"] == 10
+    assert scl["freeze_invariant_count"] == 10
+    assert scl["lockdown_setting_count"] == 12
+    assert scl["allow_production_execution"] is False
+    assert scl["authorized_claimed"] is False
+    assert scl["cycle0_status"] == "QUARANTINE"
+    assert scl["cycle1_status"] == "ELIGIBLE"
+    assert scl["frontier_z_verified"] is True
+
+    # Cross-run GovernanceCourtLedger & sol-change replay (14 runs, 112 events)
     led = report.ledger_verification
     assert led["is_valid"] is True
-    assert led["total_runs_verified"] == 8
-    assert led["total_events_verified"] == 64
+    assert led["total_runs_verified"] == 14
+    assert led["total_events_verified"] == 112
     assert led["cross_run_chained"] is True
 
     obs = report.observatory_assessments
@@ -194,6 +266,12 @@ def test_sol_holo_end_to_end_synthesis(tmp_path: Path) -> None:
         "mitotic_foliation",
         "stwm_wavefront",
         "rsi_compiler",
+        "hcam_shard",
+        "waveguide_simd",
+        "burnin_attestation",
+        "entangled_cadence",
+        "waveguide_channel_staging",
+        "sovereign_court_lockdown",
     ):
         assert obs[key]["comparability"] == "compatible"
         assert obs[key]["outcome"] == "improved"
@@ -206,7 +284,7 @@ def test_sol_holo_cli_manifest_and_synthesize(tmp_path: Path) -> None:
     assert rc_man == 0
     assert manifest_out.is_file()
     doc = json.loads(manifest_out.read_text(encoding="utf-8"))
-    assert doc["total_frontiers"] == 20
+    assert doc["total_frontiers"] == 26
     assert doc["all_frontiers_verified"] is True
 
     syn_manifest_out = tmp_path / "cli_syn_manifest.json"
@@ -214,16 +292,16 @@ def test_sol_holo_cli_manifest_and_synthesize(tmp_path: Path) -> None:
     assert rc_syn == 0
     assert syn_manifest_out.is_file()
     syn_doc = json.loads(syn_manifest_out.read_text(encoding="utf-8"))
-    assert syn_doc["total_frontiers"] == 20
+    assert syn_doc["total_frontiers"] == 26
     assert syn_doc["all_frontiers_verified"] is True
 
 
-def test_sol_holo_standalone_packet_synthesis() -> None:
+def test_sol_holo_standalone_packet_synthesis(tmp_path: Path) -> None:
     organism = SOLHoloOrganism()
     report = organism._run_standalone_packet_synthesis()
     assert report.all_verified is True
     assert report.manifest.all_frontiers_verified is True
-    assert report.manifest.total_frontiers == 20
+    assert report.manifest.total_frontiers == 26
     assert report.continuum_episode_summary["conjecture_status"] == "PROVED_THEOREM"
     assert report.continuum_episode_summary["interaction_id"].startswith("v1_")
     assert report.lumina_episode_summary["wideword_32_r7_hex"] == "0x7D5D7757"
@@ -244,6 +322,42 @@ def test_sol_holo_standalone_packet_synthesis() -> None:
     assert report.rsi_compiler_episode_summary["frontier_t_verified"] is True
     assert report.rsi_compiler_episode_summary["interaction_id"].startswith("v1_")
     assert report.rsi_compiler_episode_summary["production_mutation_allowed"] is False
-    assert report.ledger_verification["total_runs_verified"] == 8
-    assert report.ledger_verification["total_events_verified"] == 64
+    assert report.hcam_shard_episode_summary["frontier_u_verified"] is True
+    assert report.hcam_shard_episode_summary["interaction_id"].startswith("v1_")
+    assert report.hcam_shard_episode_summary["orphan_nodes_reclaimed"] == 2
+    assert report.waveguide_simd_episode_summary["frontier_v_verified"] is True
+    assert report.waveguide_simd_episode_summary["interaction_id"].startswith("v1_")
+    assert report.waveguide_simd_episode_summary["simd_lane_width"] == 64
+    assert report.waveguide_simd_episode_summary["fault_matrix_passed_cases"] == 33
+    assert report.burnin_attestation_episode_summary["frontier_w_verified"] is True
+    assert report.burnin_attestation_episode_summary["interaction_id"].startswith("v1_")
+    assert report.burnin_attestation_episode_summary["ready_verification_steps"] == 7
+    assert report.burnin_attestation_episode_summary["real_signature_claimed"] is False
+    assert report.burnin_attestation_episode_summary["network_access_used"] is False
+    assert report.entangled_cadence_episode_summary["frontier_x_verified"] is True
+    assert report.entangled_cadence_episode_summary["interaction_id"].startswith("v1_")
+    assert report.waveguide_channel_staging_episode_summary["frontier_y_verified"] is True
+    assert report.waveguide_channel_staging_episode_summary["interaction_id"].startswith("v1_")
+    assert report.sovereign_court_lockdown_episode_summary["frontier_z_verified"] is True
+    assert report.sovereign_court_lockdown_episode_summary["interaction_id"].startswith("v1_")
+    assert report.sovereign_court_lockdown_episode_summary["allow_production_execution"] is False
+    assert report.sovereign_court_lockdown_episode_summary["authorized_claimed"] is False
+    assert report.ledger_verification["total_runs_verified"] == 14
+    assert report.ledger_verification["total_events_verified"] == 112
     assert report.ledger_verification["cross_run_chained"] is True
+
+    # Negative check: tampering with package_archive_digest_attestation.real_signature_claimed
+    # in standalone packets directory must be surfaced in burnin_attestation_episode_summary
+    # and fail manifest verification.
+    tampered_dir = tmp_path / "tampered_packets"
+    shutil.copytree(organism.packets_dir, tampered_dir)
+    burnin_file = tampered_dir / "live_gemini4_burnin_attestation_packet.json"
+    burnin_data = json.loads(burnin_file.read_text(encoding="utf-8"))
+    burnin_data["frontier_w_verification"]["package_archive_digest_attestation"]["real_signature_claimed"] = True
+    burnin_file.write_text(json.dumps(burnin_data, indent=2), encoding="utf-8")
+
+    tampered_org = SOLHoloOrganism(packets_dir=tampered_dir)
+    tampered_rep = tampered_org._run_standalone_packet_synthesis()
+    assert tampered_rep.burnin_attestation_episode_summary["real_signature_claimed"] is True
+    assert tampered_rep.all_verified is False
+    assert tampered_rep.manifest.all_frontiers_verified is False

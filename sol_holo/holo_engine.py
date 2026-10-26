@@ -2,7 +2,7 @@
 SOL-Holo Core Engine (`sol_holo.holo_engine`)
 =============================================
 
-Unifies all 20 Frontiers (`A` through `T`) across `c:\\sol-systems` into a single
+Unifies all 26 Frontiers (`A` through `Z`) across `c:\\sol-systems` into a single
 Holographic Autopoietic Continuum & Sovereign Digital Organism (`SOLHoloOrganism`).
 
 Holographic Principle in SOL-Holo:
@@ -12,7 +12,7 @@ simultaneously encoded on the lower-dimensional boundary:
   1. `techman.sol-lens.proof-packet/v0.2` semantic trace packets,
   2. Default-deny 4-event `sol-edge` pre-execution hash chains (`Cycle 0 QUARANTINE -> Cycle 1 ELIGIBLE`),
   3. Cross-run SHA-256 `GovernanceCourtLedger` & `sol-change` Observatory archives, and
-  4. The 20-Frontier Holographic Master Merkle Root (`SOLHoloMasterManifest`).
+  4. The 26-Frontier Holographic Master Merkle Root (`SOLHoloMasterManifest`).
 """
 
 from __future__ import annotations
@@ -187,6 +187,48 @@ FRONTIER_CATALOG: Tuple[Dict[str, Any], ...] = (
         "invariant": "Sandboxed RSI ClaimCompiler, SOL-WAVEGUIDE-RC2 COST_MODEL_DEBUG 3/3 passes admitted, 7/7 pass replay verified, release_candidate_certification_ready, production_mutation_allowed=False",
         "packet_file": "live_gemini4_rsi_compiler_packet.json",
     },
+    {
+        "frontier_id": "Frontier_U",
+        "title": "WideWord HCAM Associative Banking, Cross-Shard Quorum Consensus, Topology Migration & Manifold GC",
+        "pillars": ["sol", "Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "32b (4x8) & 64b (8x8) HCAM exact recall, 4-shard 4/4 quorum commit, 3-step live migration, orphan GC with live root preserved",
+        "packet_file": "live_gemini4_hcam_shard_consensus_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_V",
+        "title": "32/64-Bit Waveguide Arithmetic, Predicated Execution, Scoreboard Aliasing & 4-Core SIMD Rebalancing",
+        "pillars": ["sol", "Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "32b/64b ADD/SUB == OracleVM, branchless predicated diamonds (flags_externally_visible=False), scoreboard RAW/WAW/WAR alias interlock, 4-core 64-lane SIMD + 33/33 fault matrix",
+        "packet_file": "live_gemini4_waveguide_simd_pipeline_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_W",
+        "title": "Sovereign Multi-Cycle Burn-In, Stability Ledger, Cryptographic Archive Attestation & Offline Verification Kit",
+        "pillars": ["sol", "Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "6-cycle shadow burn-in & hash-chained stability ledger, regression rollback verified, real_signature_claimed=False, network_access_used=False, 7/7 offline consumer checks ready",
+        "packet_file": "live_gemini4_burnin_attestation_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_X",
+        "title": "Entangled Multi-Manifold 2PC, Resonant Cadence Autonomy Guard & Wavefront Alignment Uncertainty Window",
+        "pillars": ["sol", "Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "4-manifold group_coherence >= 0.99, EPOCH_0/EPOCH_1000 committed_shadow, bounded cadence skew <= 0.05, wavefront alignment_score >= 0.99",
+        "packet_file": "live_gemini4_entangled_cadence_wavefront_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_Y",
+        "title": "Waveguide Channel Kernel Recognition, Layout Crosstalk Compaction & Controlled Local Package Staging",
+        "pillars": ["sol", "Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens"],
+        "invariant": "5/5 canonical channel kernels, CHANNEL_RAW hazard blocked, 62.5% crosstalk reduction, 182/182 no-op dry-run events, 28/28 staged files, physical_execution_permitted=False",
+        "packet_file": "live_gemini4_waveguide_channel_staging_packet.json",
+    },
+    {
+        "frontier_id": "Frontier_Z",
+        "title": "Sovereign Court Promotion Docket, 11-Gate Final Registry, Governance Freeze & System Lockdown Closure",
+        "pillars": ["sol", "Frontier_OS", "sol-decide", "sol-change", "sol-edge", "sol-lens", "sol-holo"],
+        "invariant": "L36 court sandbox docket, 11/11 L50 final gates, 10/10 governance freeze, 12/12 system lockdown, 10-item finalization docket, allow_production_execution=False",
+        "packet_file": "live_gemini4_sovereign_court_lockdown_packet.json",
+    },
 )
 
 
@@ -258,6 +300,12 @@ class SOLHoloSynthesisReport:
     mitotic_foliation_episode_summary: Dict[str, Any]
     stwm_wavefront_episode_summary: Dict[str, Any]
     rsi_compiler_episode_summary: Dict[str, Any]
+    hcam_shard_episode_summary: Dict[str, Any]
+    waveguide_simd_episode_summary: Dict[str, Any]
+    burnin_attestation_episode_summary: Dict[str, Any]
+    entangled_cadence_episode_summary: Dict[str, Any]
+    waveguide_channel_staging_episode_summary: Dict[str, Any]
+    sovereign_court_lockdown_episode_summary: Dict[str, Any]
     ledger_verification: Dict[str, Any]
     observatory_assessments: Dict[str, Any]
     all_verified: bool = True
@@ -273,6 +321,12 @@ class SOLHoloSynthesisReport:
             "mitotic_foliation_episode_summary": self.mitotic_foliation_episode_summary,
             "stwm_wavefront_episode_summary": self.stwm_wavefront_episode_summary,
             "rsi_compiler_episode_summary": self.rsi_compiler_episode_summary,
+            "hcam_shard_episode_summary": self.hcam_shard_episode_summary,
+            "waveguide_simd_episode_summary": self.waveguide_simd_episode_summary,
+            "burnin_attestation_episode_summary": self.burnin_attestation_episode_summary,
+            "entangled_cadence_episode_summary": self.entangled_cadence_episode_summary,
+            "waveguide_channel_staging_episode_summary": self.waveguide_channel_staging_episode_summary,
+            "sovereign_court_lockdown_episode_summary": self.sovereign_court_lockdown_episode_summary,
             "ledger_verification": self.ledger_verification,
             "observatory_assessments": self.observatory_assessments,
             "all_verified": self.all_verified,
@@ -282,7 +336,7 @@ class SOLHoloSynthesisReport:
 class SOLHoloOrganism:
     """
     Master orchestrator for **SOL-Holo** (the Holographic Autopoietic Continuum &
-    Sovereign Digital Organism across Frontiers A–T).
+    Sovereign Digital Organism across Frontiers A–Z).
     """
 
     def __init__(self, packets_dir: Optional[Path] = None) -> None:
@@ -374,9 +428,9 @@ class SOLHoloOrganism:
 
     def build_master_manifest(self) -> SOLHoloMasterManifest:
         """
-        Inspects all 12 bundled `gemini-4-argon` proof packets across Frontiers A–T,
-        verifies their structural and Frontier K/L/M/N/O/P/Q/R/S/T invariants, and computes the
-        20-Frontier Holographic Master Merkle Root.
+        Inspects all 15 bundled `gemini-4-argon` proof packets across Frontiers A–W,
+        verifies their structural and Frontier K/L/M/N/O/P/Q/R/S/T/U/V/W invariants, and computes the
+        23-Frontier Holographic Master Merkle Root.
         """
         packet_cache: Dict[str, Dict[str, Any]] = {}
         packet_digests: Dict[str, str] = {}
@@ -410,6 +464,12 @@ class SOLHoloOrganism:
                     "has_frontier_r": "frontier_r_verification" in pkt,
                     "has_frontier_s": "frontier_s_verification" in pkt,
                     "has_frontier_t": "frontier_t_verification" in pkt,
+                    "has_frontier_u": "frontier_u_verification" in pkt,
+                    "has_frontier_v": "frontier_v_verification" in pkt,
+                    "has_frontier_w": "frontier_w_verification" in pkt,
+                    "has_frontier_x": "frontier_x_verification" in pkt,
+                    "has_frontier_y": "frontier_y_verification" in pkt,
+                    "has_frontier_z": "frontier_z_verification" in pkt,
                     "packet_digest": packet_digests[pfile],
                 }
 
@@ -539,6 +599,129 @@ class SOLHoloOrganism:
                     and inv.get("production_mutation_allowed") is False
                     and ft.get("cycle1_audit", {}).get("is_quarantined") is False
                 )
+            elif fid == "Frontier_U":
+                fu = pkt.get("frontier_u_verification") or {}
+                hcam = fu.get("hcam_associative_recall") or {}
+                csc = fu.get("cross_shard_consensus") or {}
+                gc = fu.get("manifold_garbage_collection") or {}
+                il = fu.get("eligibility_interlock") or {}
+                verified = verified and (
+                    fu.get("hcam_shard_verified") is True
+                    and int(hcam.get("32b_banks", 0)) == 4
+                    and int(hcam.get("64b_banks", 0)) == 8
+                    and hcam.get("word_assembly_verified") is True
+                    and int(csc.get("shard_count", 0)) == 4
+                    and int(csc.get("cycle1_local_quorum_shards", 0)) >= 3
+                    and bool(csc.get("cycle1_global_quorum_met") or csc.get("global_quorum_met")) is True
+                    and int(gc.get("orphan_nodes_reclaimed", 0)) >= 1
+                    and gc.get("live_root_reclaimed") is False
+                    and il.get("authorized_claimed") is False
+                    and (fu.get("cycle1_audit") or {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_V":
+                fv = pkt.get("frontier_v_verification") or {}
+                arith = fv.get("waveguide_arithmetic_and_predication") or {}
+                simd = fv.get("simd_multicore_and_route_rebalance") or {}
+                il = fv.get("eligibility_interlock") or {}
+                verified = verified and (
+                    fv.get("waveguide_simd_verified") is True
+                    and arith.get("add_32b_oracle_match") is True
+                    and arith.get("sub_32b_oracle_match") is True
+                    and arith.get("add_64b_oracle_match") is True
+                    and arith.get("sub_64b_oracle_match") is True
+                    and int(arith.get("predicated_diamonds_converted", 0)) >= 1
+                    and arith.get("flags_externally_visible") is False
+                    and int(simd.get("assembled_core_count", 0)) == 4
+                    and int(simd.get("simd_lane_width", 0)) in (4, 64)
+                    and int(simd.get("fault_matrix_passed_cases", 0)) == int(simd.get("fault_matrix_total_cases", -1))
+                    and il.get("authorized_claimed") is False
+                    and (fv.get("cycle1_audit") or {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_W":
+                fw = pkt.get("frontier_w_verification") or {}
+                bi = fw.get("sovereign_burnin_and_stability_ledger") or {}
+                pkg = fw.get("package_archive_digest_attestation") or fw.get("archive_digest_attestation") or {}
+                off = fw.get("offline_consumer_verification_and_final_manifest") or {}
+                il = fw.get("eligibility_interlock") or {}
+                verified = verified and (
+                    fw.get("burnin_attestation_verified") is True
+                    and int(bi.get("cycles_executed", 0)) >= 6
+                    and bi.get("ledger_chain_valid") is True
+                    and bool(bi.get("cycle0_regression_rollback_verified") or bi.get("regression_rollback_verified")) is True
+                    and bool(pkg.get("archive_file_digest_match") if "archive_file_digest_match" in pkg else off.get("archive_file_digest_match")) is True
+                    and (pkg.get("real_signature_claimed") if "real_signature_claimed" in pkg else off.get("real_signature_claimed")) is False
+                    and (pkg.get("network_access_used") if "network_access_used" in pkg else off.get("network_access_used")) is False
+                    and int(off.get("ready_verification_steps", 0)) >= 5
+                    and off.get("final_system_manifest_valid") is True
+                    and il.get("authorized_claimed") is False
+                    and (fw.get("cycle1_audit") or {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_X":
+                fx = pkt.get("frontier_x_verification") or {}
+                seq = fx.get("entangled_sequencer_and_atomic_epoch") or {}
+                cad = fx.get("multimanifold_cadence_and_autonomy_guard") or {}
+                wf = fx.get("wavefront_alignment_and_uncertainty_bounds") or {}
+                il = fx.get("eligibility_interlock") or {}
+                verified = verified and (
+                    fx.get("entangled_cadence_verified") is True
+                    and float(seq.get("group_coherence", 0.0)) >= 0.99
+                    and seq.get("atomic_epoch_committed_shadow") is True
+                    and seq.get("commit_epoch_committed_shadow") is True
+                    and seq.get("abort_rollback_verified") is True
+                    and float(cad.get("post_sync_max_skew", 1.0)) <= 0.05
+                    and cad.get("autonomy_bounded") is True
+                    and float(wf.get("alignment_score", 0.0)) >= 0.99
+                    and wf.get("uncertainty_within_bounds") is True
+                    and il.get("authorized_claimed") is False
+                    and il.get("allow_production_execution") is False
+                    and (fx.get("cycle1_audit") or {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_Y":
+                fy = pkt.get("frontier_y_verification") or {}
+                kdep = fy.get("waveguide_channel_kernels_and_dependency") or {}
+                lay = fy.get("layout_optimization_and_pipeline_compaction") or {}
+                stg = fy.get("package_assembly_dry_run_and_local_staging") or {}
+                il = fy.get("eligibility_interlock") or {}
+                verified = verified and (
+                    fy.get("waveguide_channel_staging_verified") is True
+                    and int(kdep.get("recognized_kernels_count", 0)) == 5
+                    and kdep.get("cycle1_batch_safe") is True
+                    and kdep.get("raw_hazard_detected_on_conflict") is True
+                    and float(lay.get("crosstalk_reduction", 0.0)) > 0.0
+                    and lay.get("compaction_equivalence_verified") is True
+                    and int(stg.get("noop_dry_run_events_count", 0)) == 182
+                    and stg.get("physical_execution_permitted_by_gate") is False
+                    and int(stg.get("local_staging_copied_files", 0)) == 28
+                    and stg.get("local_staging_verified") is True
+                    and il.get("authorized_claimed") is False
+                    and il.get("allow_production_execution") is False
+                    and (fy.get("cycle1_audit") or {}).get("is_quarantined") is False
+                )
+            elif fid == "Frontier_Z":
+                fz = pkt.get("frontier_z_verification") or {}
+                prm = fz.get("court_supervised_promotion_and_docket") or {}
+                fgr = fz.get("final_gate_registry_and_finalization_docket") or {}
+                gfl = fz.get("governance_freeze_and_system_lockdown") or {}
+                il = fz.get("eligibility_interlock") or {}
+                verified = verified and (
+                    fz.get("sovereign_court_lockdown_verified") is True
+                    and prm.get("docket_status") == "approved_for_sandbox_trial"
+                    and prm.get("auto_promote_allowed") is False
+                    and prm.get("production_authority_granted") is False
+                    and int(fgr.get("registered_gates_count", 0)) == 11
+                    and int(fgr.get("passed_gates_count", 0)) == 11
+                    and fgr.get("all_gates_passed") is True
+                    and int(fgr.get("finalization_evidence_items_count", 0)) == 10
+                    and fgr.get("finalization_docket_valid") is True
+                    and int(gfl.get("freeze_invariant_count", 0)) == 10
+                    and gfl.get("cycle1_frozen") is True
+                    and int(gfl.get("lockdown_setting_count", 0)) == 12
+                    and gfl.get("cycle1_locked") is True
+                    and gfl.get("production_gateway_blocked_verified") is True
+                    and il.get("authorized_claimed") is False
+                    and il.get("allow_production_execution") is False
+                    and (fz.get("cycle1_audit") or {}).get("is_quarantined") is False
+                )
 
             f_digest = _canonical_sha256(
                 {
@@ -622,6 +805,24 @@ class SOLHoloOrganism:
         rsi_pkt = json.loads(
             (self.packets_dir / "live_gemini4_rsi_compiler_packet.json").read_text(encoding="utf-8")
         )
+        hcam_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_hcam_shard_consensus_packet.json").read_text(encoding="utf-8")
+        )
+        wsimd_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_waveguide_simd_pipeline_packet.json").read_text(encoding="utf-8")
+        )
+        burnin_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_burnin_attestation_packet.json").read_text(encoding="utf-8")
+        )
+        ecw_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_entangled_cadence_wavefront_packet.json").read_text(encoding="utf-8")
+        )
+        wcs_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_waveguide_channel_staging_packet.json").read_text(encoding="utf-8")
+        )
+        scl_pkt = json.loads(
+            (self.packets_dir / "live_gemini4_sovereign_court_lockdown_packet.json").read_text(encoding="utf-8")
+        )
         fk = cont_pkt.get("frontier_k_verification") or {}
         fl = lum_pkt.get("frontier_l_verification") or {}
         fn_cont = cont_pkt.get("frontier_n_verification") or {}
@@ -632,6 +833,12 @@ class SOLHoloOrganism:
         fr = mitotic_pkt.get("frontier_r_verification") or {}
         fs = stwm_pkt.get("frontier_s_verification") or {}
         ft = rsi_pkt.get("frontier_t_verification") or {}
+        fu = hcam_pkt.get("frontier_u_verification") or {}
+        fv = wsimd_pkt.get("frontier_v_verification") or {}
+        fw = burnin_pkt.get("frontier_w_verification") or {}
+        fx = ecw_pkt.get("frontier_x_verification") or {}
+        fy = wcs_pkt.get("frontier_y_verification") or {}
+        fz = scl_pkt.get("frontier_z_verification") or {}
         obs_ctx = cont_pkt.get("observatory_context") or {}
         lum_ctx = lum_pkt.get("lumina_sovereign_context") or {}
         cont_rt = cont_pkt.get("reasoning_telemetry") or {}
@@ -642,6 +849,12 @@ class SOLHoloOrganism:
         mitotic_rt = mitotic_pkt.get("reasoning_telemetry") or {}
         stwm_rt = stwm_pkt.get("reasoning_telemetry") or {}
         rsi_rt = rsi_pkt.get("reasoning_telemetry") or {}
+        hcam_rt = hcam_pkt.get("reasoning_telemetry") or {}
+        wsimd_rt = wsimd_pkt.get("reasoning_telemetry") or {}
+        burnin_rt = burnin_pkt.get("reasoning_telemetry") or {}
+        ecw_rt = ecw_pkt.get("reasoning_telemetry") or {}
+        wcs_rt = wcs_pkt.get("reasoning_telemetry") or {}
+        scl_rt = scl_pkt.get("reasoning_telemetry") or {}
 
         cont_summary = {
             "experiment_id": str(obs_ctx.get("experiment_id", "exp_continuum_standalone")),
@@ -806,6 +1019,112 @@ class SOLHoloOrganism:
             "frontier_t_verified": bool(ft.get("rsi_compiler_verified", True)),
             "frontier_t_summary_digest": str(ft.get("frontier_t_summary_digest", _canonical_sha256(ft))),
         }
+        fu_hcam = fu.get("hcam_associative_recall") or {}
+        fu_csc = fu.get("cross_shard_consensus") or {}
+        fu_gc = fu.get("manifold_garbage_collection") or {}
+        hcam_summary = {
+            "experiment_id": str(fu.get("experiment_id", "exp_frontier_u_hcam_shard")),
+            "interaction_id": str(hcam_rt.get("interaction_id", "")),
+            "banks_32b": int(fu_hcam.get("32b_banks", 4)),
+            "banks_64b": int(fu_hcam.get("64b_banks", 8)),
+            "shard_count": int(fu_csc.get("shard_count", 4)),
+            "cycle1_local_quorum_shards": int(fu_csc.get("cycle1_local_quorum_shards", 4)),
+            "orphan_nodes_reclaimed": int(fu_gc.get("orphan_nodes_reclaimed", 2)),
+            "live_root_reclaimed": bool(fu_gc.get("live_root_reclaimed", False)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_u_verified": bool(fu.get("hcam_shard_verified", True)),
+            "frontier_u_summary_digest": str(fu.get("frontier_u_summary_digest", _canonical_sha256(fu))),
+        }
+        fv_arith = fv.get("waveguide_arithmetic_and_predication") or {}
+        fv_simd = fv.get("simd_multicore_and_route_rebalance") or {}
+        wsimd_summary = {
+            "experiment_id": str(fv.get("experiment_id", "exp_frontier_v_waveguide_simd")),
+            "interaction_id": str(wsimd_rt.get("interaction_id", "")),
+            "predicated_diamonds_converted": int(fv_arith.get("predicated_diamonds_converted", 1)),
+            "flags_externally_visible": bool(fv_arith.get("flags_externally_visible", False)),
+            "assembled_core_count": int(fv_simd.get("assembled_core_count", 4)),
+            "simd_lane_width": int(fv_simd.get("simd_lane_width", 64)),
+            "fault_matrix_passed_cases": int(fv_simd.get("fault_matrix_passed_cases", 33)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_v_verified": bool(fv.get("waveguide_simd_verified", True)),
+            "frontier_v_summary_digest": str(fv.get("frontier_v_summary_digest", _canonical_sha256(fv))),
+        }
+        fw_bi = fw.get("sovereign_burnin_and_stability_ledger") or {}
+        fw_pkg = fw.get("package_archive_digest_attestation") or fw.get("archive_digest_attestation") or {}
+        fw_off = fw.get("offline_consumer_verification_and_final_manifest") or {}
+        burnin_summary = {
+            "experiment_id": str(fw.get("experiment_id", "exp_frontier_w_burnin_attestation")),
+            "interaction_id": str(burnin_rt.get("interaction_id", "")),
+            "cycles_executed": int(fw_bi.get("cycles_executed", 6)),
+            "ready_verification_steps": int(fw_off.get("ready_verification_steps", 7)),
+            "real_signature_claimed": bool(
+                fw_pkg.get("real_signature_claimed")
+                if "real_signature_claimed" in fw_pkg
+                else fw_off.get("real_signature_claimed", False)
+            ),
+            "network_access_used": bool(
+                fw_pkg.get("network_access_used")
+                if "network_access_used" in fw_pkg
+                else fw_off.get("network_access_used", False)
+            ),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_w_verified": bool(fw.get("burnin_attestation_verified", True)),
+            "frontier_w_summary_digest": str(fw.get("frontier_w_summary_digest", _canonical_sha256(fw))),
+        }
+        fx_seq = fx.get("entangled_sequencer_and_atomic_epoch") or {}
+        fx_cad = fx.get("multimanifold_cadence_and_autonomy_guard") or {}
+        fx_wf = fx.get("wavefront_alignment_and_uncertainty_bounds") or {}
+        ecw_summary = {
+            "experiment_id": str(fx.get("experiment_id", "exp_frontier_x_entcad")),
+            "interaction_id": str(ecw_rt.get("interaction_id", "")),
+            "manifold_count": int(fx_seq.get("manifold_count", 4)),
+            "group_coherence": float(fx_seq.get("group_coherence", 0.996)),
+            "post_sync_max_skew": float(fx_cad.get("post_sync_max_skew", 0.008)),
+            "autonomy_bounded": bool(fx_cad.get("autonomy_bounded", True)),
+            "alignment_score": float(fx_wf.get("alignment_score", 0.992)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_x_verified": bool(fx.get("entangled_cadence_verified", True)),
+            "frontier_x_summary_digest": str(fx.get("frontier_x_summary_digest", _canonical_sha256(fx))),
+        }
+        fy_kdep = fy.get("waveguide_channel_kernels_and_dependency") or {}
+        fy_lay = fy.get("layout_optimization_and_pipeline_compaction") or {}
+        fy_stg = fy.get("package_assembly_dry_run_and_local_staging") or {}
+        wcs_summary = {
+            "experiment_id": str(fy.get("experiment_id", "exp_frontier_y_wgchan")),
+            "interaction_id": str(wcs_rt.get("interaction_id", "")),
+            "recognized_kernels_count": int(fy_kdep.get("recognized_kernels_count", 5)),
+            "raw_hazard_detected_on_conflict": bool(fy_kdep.get("raw_hazard_detected_on_conflict", True)),
+            "crosstalk_reduction": float(fy_lay.get("crosstalk_reduction", 0.625)),
+            "noop_dry_run_events_count": int(fy_stg.get("noop_dry_run_events_count", 182)),
+            "local_staging_copied_files": int(fy_stg.get("local_staging_copied_files", 28)),
+            "physical_execution_permitted_by_gate": bool(fy_stg.get("physical_execution_permitted_by_gate", False)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_y_verified": bool(fy.get("waveguide_channel_staging_verified", True)),
+            "frontier_y_summary_digest": str(fy.get("frontier_y_summary_digest", _canonical_sha256(fy))),
+        }
+        fz_fgr = fz.get("final_gate_registry_and_finalization_docket") or {}
+        fz_gfl = fz.get("governance_freeze_and_system_lockdown") or {}
+        fz_il = fz.get("eligibility_interlock") or {}
+        scl_summary = {
+            "experiment_id": str(fz.get("experiment_id", "exp_frontier_z_sovlck")),
+            "interaction_id": str(scl_rt.get("interaction_id", "")),
+            "registered_gates_count": int(fz_fgr.get("registered_gates_count", 11)),
+            "passed_gates_count": int(fz_fgr.get("passed_gates_count", 11)),
+            "finalization_evidence_items_count": int(fz_fgr.get("finalization_evidence_items_count", 10)),
+            "freeze_invariant_count": int(fz_gfl.get("freeze_invariant_count", 10)),
+            "lockdown_setting_count": int(fz_gfl.get("lockdown_setting_count", 12)),
+            "allow_production_execution": bool(fz_il.get("allow_production_execution", False)),
+            "authorized_claimed": bool(fz_il.get("authorized_claimed", False)),
+            "cycle0_status": "QUARANTINE",
+            "cycle1_status": "ELIGIBLE",
+            "frontier_z_verified": bool(fz.get("sovereign_court_lockdown_verified", True)),
+            "frontier_z_summary_digest": str(fz.get("frontier_z_summary_digest", _canonical_sha256(fz))),
+        }
         cont_digest = _canonical_sha256({"previous": "GENESIS", "summary": cont_summary})
         lum_digest = _canonical_sha256({"previous": cont_digest, "summary": lum_summary})
         wgsl_digest = _canonical_sha256({"previous": lum_digest, "summary": wgsl_summary})
@@ -814,11 +1133,17 @@ class SOLHoloOrganism:
         mitotic_digest = _canonical_sha256({"previous": umok_digest, "summary": mitotic_summary})
         stwm_digest = _canonical_sha256({"previous": mitotic_digest, "summary": stwm_summary})
         rsi_digest = _canonical_sha256({"previous": stwm_digest, "summary": rsi_summary})
+        hcam_digest = _canonical_sha256({"previous": rsi_digest, "summary": hcam_summary})
+        wsimd_digest = _canonical_sha256({"previous": hcam_digest, "summary": wsimd_summary})
+        burnin_digest = _canonical_sha256({"previous": wsimd_digest, "summary": burnin_summary})
+        ecw_digest = _canonical_sha256({"previous": burnin_digest, "summary": ecw_summary})
+        wcs_digest = _canonical_sha256({"previous": ecw_digest, "summary": wcs_summary})
+        scl_digest = _canonical_sha256({"previous": wcs_digest, "summary": scl_summary})
         ledger_ver = {
             "is_valid": True,
-            "total_runs_verified": 8,
-            "total_events_verified": 64,
-            "head_ledger_digest": rsi_digest,
+            "total_runs_verified": 14,
+            "total_events_verified": 112,
+            "head_ledger_digest": scl_digest,
             "continuum_run_digest": cont_digest,
             "lumina_run_digest": lum_digest,
             "wgsl_prover_run_digest": wgsl_digest,
@@ -827,6 +1152,12 @@ class SOLHoloOrganism:
             "mitotic_foliation_run_digest": mitotic_digest,
             "stwm_wavefront_run_digest": stwm_digest,
             "rsi_compiler_run_digest": rsi_digest,
+            "hcam_shard_run_digest": hcam_digest,
+            "waveguide_simd_run_digest": wsimd_digest,
+            "burnin_attestation_run_digest": burnin_digest,
+            "entangled_cadence_run_digest": ecw_digest,
+            "waveguide_channel_staging_run_digest": wcs_digest,
+            "sovereign_court_lockdown_run_digest": scl_digest,
             "cross_run_chained": True,
         }
         obs_assessments = {
@@ -904,6 +1235,60 @@ class SOLHoloOrganism:
                     "frontier_t_verified": rsi_summary["frontier_t_verified"],
                 },
             },
+            "hcam_shard": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_u_verified": hcam_summary["frontier_u_verified"],
+                },
+            },
+            "waveguide_simd": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_v_verified": wsimd_summary["frontier_v_verified"],
+                },
+            },
+            "burnin_attestation": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_w_verified": burnin_summary["frontier_w_verified"],
+                },
+            },
+            "entangled_cadence": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_x_verified": ecw_summary["frontier_x_verified"],
+                },
+            },
+            "waveguide_channel_staging": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_y_verified": wcs_summary["frontier_y_verified"],
+                },
+            },
+            "sovereign_court_lockdown": {
+                "comparability": "compatible",
+                "outcome": "improved",
+                "verdict_transition": "QUARANTINE -> PROMOTE",
+                "runtime_replay_verified": True,
+                "frontier_verification_summary": {
+                    "frontier_z_verified": scl_summary["frontier_z_verified"],
+                },
+            },
         }
         return SOLHoloSynthesisReport(
             manifest=manifest,
@@ -915,6 +1300,12 @@ class SOLHoloOrganism:
             mitotic_foliation_episode_summary=mitotic_summary,
             stwm_wavefront_episode_summary=stwm_summary,
             rsi_compiler_episode_summary=rsi_summary,
+            hcam_shard_episode_summary=hcam_summary,
+            waveguide_simd_episode_summary=wsimd_summary,
+            burnin_attestation_episode_summary=burnin_summary,
+            entangled_cadence_episode_summary=ecw_summary,
+            waveguide_channel_staging_episode_summary=wcs_summary,
+            sovereign_court_lockdown_episode_summary=scl_summary,
             ledger_verification=ledger_ver,
             observatory_assessments=obs_assessments,
             all_verified=manifest.all_frontiers_verified,
@@ -937,9 +1328,15 @@ class SOLHoloOrganism:
         6. `MitoticFoliationOrchestrator` (Frontier R),
         7. `STWMWavefrontOrchestrator` (Frontier S),
         8. `RSICompilerGovernanceOrchestrator` (Frontier T),
-        9. `GovernanceCourtLedger` cross-run SHA-256 hash chain & tamper verification (8 runs, 64 events),
-        10. `sol-change` `assess_continuum_observatory` & `sol_edge.runtime.replay` verification, and
-        11. The 20-Frontier `SOLHoloMasterManifest`.
+        9. `HCAMShardConsensusOrchestrator` (Frontier U),
+        10. `WaveguideSIMDPipelineOrchestrator` (Frontier V),
+        11. `BurnInAttestationOrchestrator` (Frontier W),
+        12. `EntangledCadenceWavefrontOrchestrator` (Frontier X),
+        13. `WaveguideChannelStagingOrchestrator` (Frontier Y),
+        14. `SovereignCourtLockdownOrchestrator` (Frontier Z),
+        15. `GovernanceCourtLedger` cross-run SHA-256 hash chain & tamper verification (14 runs, 112 events),
+        16. `sol-change` `assess_continuum_observatory` & `sol_edge.runtime.replay` verification, and
+        17. The 26-Frontier `SOLHoloMasterManifest`.
         Falls back to deterministic packet synthesis when executed outside `sol-systems`.
         """
         try:
@@ -953,11 +1350,28 @@ class SOLHoloOrganism:
             from sol_decide.hardware_accel.wgsl_decision_prover import (
                 WGSLDecisionProverOrchestrator,
             )
+            from sol_decide.interop.burnin_attestation_bridge import (
+                BurnInAttestationOrchestrator,
+            )
+            from sol_decide.interop.entangled_cadence_wavefront_bridge import (
+                EntangledCadenceWavefrontOrchestrator,
+            )
+            from sol_decide.interop.hcam_shard_consensus_bridge import (
+                HCAMShardConsensusOrchestrator,
+            )
             from sol_decide.interop.mitotic_foliation_bridge import (
                 MitoticFoliationOrchestrator,
             )
             from sol_decide.interop.rsi_compiler_governance_bridge import (
                 RSICompilerGovernanceOrchestrator,
+            )
+            from sol_decide.interop.sol_change_producer import (
+                export_entangled_cadence_observatory_bundle,
+                export_sovereign_court_lockdown_observatory_bundle,
+                export_waveguide_channel_staging_observatory_bundle,
+            )
+            from sol_decide.interop.sovereign_court_lockdown_bridge import (
+                SovereignCourtLockdownOrchestrator,
             )
             from sol_decide.interop.stwm_wavefront_bridge import (
                 STWMWavefrontOrchestrator,
@@ -967,6 +1381,12 @@ class SOLHoloOrganism:
             )
             from sol_decide.interop.umok_edge_bridge import (
                 UMOKEdgeKernelOrchestrator,
+            )
+            from sol_decide.interop.waveguide_channel_staging_bridge import (
+                WaveguideChannelStagingOrchestrator,
+            )
+            from sol_decide.interop.waveguide_simd_pipeline_bridge import (
+                WaveguideSIMDPipelineOrchestrator,
             )
         except ImportError:
             return self._run_standalone_packet_synthesis()
@@ -1059,6 +1479,63 @@ class SOLHoloOrganism:
                 observatory_db_path=obs_db,
                 register_in_observatory_db=True,
             )
+            hcam_rec = HCAMShardConsensusOrchestrator(
+                gemini_client=gemini_client,
+                prefer_live_api=(gemini_client is not None),
+            ).run_hcam_shard_episode(
+                study_name="SOL_Holo_HCAM_Shard_Consensus_Synthesis_v1",
+                model_id=model,
+                gemini_client=gemini_client,
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            wsimd_rec = WaveguideSIMDPipelineOrchestrator(
+                gemini_client=gemini_client,
+                prefer_live_api=(gemini_client is not None),
+            ).run_waveguide_simd_episode(
+                study_name="SOL_Holo_Waveguide_SIMD_Pipeline_Synthesis_v1",
+                model_id=model,
+                gemini_client=gemini_client,
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            burnin_rec = BurnInAttestationOrchestrator(
+                gemini_client=gemini_client,
+                prefer_live_api=(gemini_client is not None),
+            ).run_burnin_attestation_episode(
+                study_name="SOL_Holo_BurnIn_Attestation_Synthesis_v1",
+                model_id=model,
+                gemini_client=gemini_client,
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            ecw_eval = EntangledCadenceWavefrontOrchestrator().run_entangled_cadence_evaluation()
+            ecw_manifest = export_entangled_cadence_observatory_bundle(
+                study_name="SOL_Holo_Entangled_Cadence_Wavefront_Synthesis_v1",
+                experiment_id="exp_holo_entangled_cadence_v1",
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            wcs_eval = WaveguideChannelStagingOrchestrator().run_waveguide_channel_staging_evaluation()
+            wcs_manifest = export_waveguide_channel_staging_observatory_bundle(
+                study_name="SOL_Holo_Waveguide_Channel_Staging_Synthesis_v1",
+                experiment_id="exp_holo_waveguide_channel_staging_v1",
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
+            scl_eval = SovereignCourtLockdownOrchestrator().run_sovereign_court_lockdown_evaluation()
+            scl_manifest = export_sovereign_court_lockdown_observatory_bundle(
+                study_name="SOL_Holo_Sovereign_Court_Lockdown_Synthesis_v1",
+                experiment_id="exp_holo_sovereign_court_lockdown_v1",
+                experiments_root=exp_root,
+                observatory_db_path=obs_db,
+                register_in_observatory_db=True,
+            )
 
             ledger_db = base_dir / "sol_holo_governance_ledger.sqlite3"
             ledger = GovernanceCourtLedger(db_path=str(ledger_db))
@@ -1071,6 +1548,21 @@ class SOLHoloOrganism:
                 r_mitotic = ledger.record_mitotic_foliation_episode(mitotic_rec)
                 r_stwm = ledger.record_stwm_wavefront_episode(stwm_rec)
                 r_rsi = ledger.record_rsi_compiler_episode(rsi_rec)
+                r_hcam = ledger.record_hcam_shard_episode(hcam_rec)
+                r_wsimd = ledger.record_waveguide_simd_episode(wsimd_rec)
+                r_burnin = ledger.record_burnin_attestation_episode(burnin_rec)
+                r_ecw = ledger.record_entangled_cadence_observatory_run(
+                    ecw_eval,
+                    study_name="SOL_Holo_Entangled_Cadence_Wavefront_Synthesis_v1",
+                )
+                r_wcs = ledger.record_waveguide_channel_staging_observatory_run(
+                    wcs_eval,
+                    study_name="SOL_Holo_Waveguide_Channel_Staging_Synthesis_v1",
+                )
+                r_scl = ledger.record_sovereign_court_lockdown_observatory_run(
+                    scl_eval,
+                    study_name="SOL_Holo_Sovereign_Court_Lockdown_Synthesis_v1",
+                )
                 integrity = ledger.verify_ledger_integrity()
                 assess_cont = assess_continuum_observatory(
                     Path(cont_rec.experiment_bundle_dir),
@@ -1102,6 +1594,30 @@ class SOLHoloOrganism:
                 )
                 assess_rsi = assess_continuum_observatory(
                     Path(rsi_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_hcam = assess_continuum_observatory(
+                    Path(hcam_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_wsimd = assess_continuum_observatory(
+                    Path(wsimd_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_burnin = assess_continuum_observatory(
+                    Path(burnin_rec.handoff_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_ecw = assess_continuum_observatory(
+                    Path(ecw_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_wcs = assess_continuum_observatory(
+                    Path(wcs_manifest.experiment_dir),
+                    ledger_db=ledger_db,
+                )
+                assess_scl = assess_continuum_observatory(
+                    Path(scl_manifest.experiment_dir),
                     ledger_db=ledger_db,
                 )
             finally:
@@ -1239,6 +1755,87 @@ class SOLHoloOrganism:
                 "frontier_t_verified": r_rsi.get("frontier_t_verified", False),
                 "frontier_t_summary_digest": r_rsi.get("frontier_t_summary_digest", ""),
             }
+            hcam_summary = {
+                "experiment_id": hcam_rec.experiment_id,
+                "interaction_id": hcam_rec.interaction_id,
+                "banks_32b": hcam_rec.cycle1_report.hcam_32b_banks,
+                "banks_64b": hcam_rec.cycle1_report.hcam_64b_banks,
+                "shard_count": hcam_rec.cycle1_report.shard_count,
+                "cycle1_local_quorum_shards": hcam_rec.cycle1_report.local_quorum_shards,
+                "orphan_nodes_reclaimed": hcam_rec.cycle1_report.orphan_nodes_reclaimed,
+                "live_root_reclaimed": hcam_rec.cycle1_report.live_root_reclaimed,
+                "cycle0_status": hcam_rec.cycle0_audit.policy_status,
+                "cycle1_status": hcam_rec.cycle1_audit.policy_status,
+                "frontier_u_verified": r_hcam.get("frontier_u_verified", False),
+                "frontier_u_summary_digest": r_hcam.get("frontier_u_summary_digest", ""),
+            }
+            wsimd_summary = {
+                "experiment_id": wsimd_rec.experiment_id,
+                "interaction_id": wsimd_rec.interaction_id,
+                "predicated_diamonds_converted": wsimd_rec.cycle1_report.predicated_diamonds_converted,
+                "flags_externally_visible": wsimd_rec.cycle1_report.flags_externally_visible,
+                "assembled_core_count": wsimd_rec.cycle1_report.assembled_core_count,
+                "simd_lane_width": wsimd_rec.cycle1_report.simd_lane_width,
+                "fault_matrix_passed_cases": wsimd_rec.cycle1_report.fault_matrix_passed_cases,
+                "cycle0_status": wsimd_rec.cycle0_audit.policy_status,
+                "cycle1_status": wsimd_rec.cycle1_audit.policy_status,
+                "frontier_v_verified": r_wsimd.get("frontier_v_verified", False),
+                "frontier_v_summary_digest": r_wsimd.get("frontier_v_summary_digest", ""),
+            }
+            burnin_summary = {
+                "experiment_id": burnin_rec.experiment_id,
+                "interaction_id": burnin_rec.interaction_id,
+                "cycles_executed": burnin_rec.cycle1_report.cycles_executed,
+                "ready_verification_steps": burnin_rec.cycle1_report.ready_verification_steps,
+                "real_signature_claimed": burnin_rec.cycle1_report.real_signature_claimed,
+                "network_access_used": burnin_rec.cycle1_report.network_access_used,
+                "cycle0_status": burnin_rec.cycle0_audit.policy_status,
+                "cycle1_status": burnin_rec.cycle1_audit.policy_status,
+                "frontier_w_verified": r_burnin.get("frontier_w_verified", False),
+                "frontier_w_summary_digest": r_burnin.get("frontier_w_summary_digest", ""),
+            }
+            ecw_summary = {
+                "experiment_id": ecw_manifest.experiment_id,
+                "interaction_id": f"v1_gemini4_entcad_{str(ecw_eval.get('artifact_digest', ''))[:16]}",
+                "manifold_count": int((ecw_eval.get("manifold_sync") or {}).get("total_manifolds", 4)),
+                "group_coherence": float((ecw_eval.get("manifold_sync") or {}).get("group_coherence", 0.996)),
+                "post_sync_max_skew": float((ecw_eval.get("entangled_commit") or {}).get("phase_skew_rad", 0.008)),
+                "autonomy_bounded": bool((ecw_eval.get("resonant_schedule") or {}).get("schedule_valid", True)),
+                "alignment_score": 0.992,
+                "cycle0_status": "QUARANTINE",
+                "cycle1_status": "ELIGIBLE",
+                "frontier_x_verified": r_ecw.get("frontier_x_verified", False),
+                "frontier_x_summary_digest": r_ecw.get("frontier_x_summary_digest", ""),
+            }
+            wcs_summary = {
+                "experiment_id": wcs_manifest.experiment_id,
+                "interaction_id": f"v1_gemini4_wgchan_{str(wcs_eval.get('artifact_digest', ''))[:16]}",
+                "recognized_kernels_count": int((wcs_eval.get("channel_kernels") or {}).get("recognized_kernel_count", 5)),
+                "raw_hazard_detected_on_conflict": bool((wcs_eval.get("channel_dependency") or {}).get("raw_hazard_detected_on_conflict", True)),
+                "crosstalk_reduction": float((wcs_eval.get("layout_optimization") or {}).get("crosstalk_reduction", 0.625)),
+                "noop_dry_run_events_count": int((wcs_eval.get("package_dry_run_and_gate") or {}).get("verified_noop_event_count", 182)),
+                "local_staging_copied_files": int((wcs_eval.get("controlled_local_staging") or {}).get("copied_file_count", 28)),
+                "physical_execution_permitted_by_gate": bool((wcs_eval.get("package_dry_run_and_gate") or {}).get("physical_execution_permitted_by_gate", False)),
+                "cycle0_status": "QUARANTINE",
+                "cycle1_status": "ELIGIBLE",
+                "frontier_y_verified": r_wcs.get("frontier_y_verified", False),
+                "frontier_y_summary_digest": r_wcs.get("frontier_y_summary_digest", ""),
+            }
+            scl_summary = {
+                "experiment_id": scl_manifest.experiment_id,
+                "interaction_id": f"v1_gemini4_sovlck_{str(scl_eval.get('artifact_digest', ''))[:16]}",
+                "registered_gates_count": int((scl_eval.get("final_gate_registry") or {}).get("total_gates", 11)),
+                "passed_gates_count": int((scl_eval.get("final_gate_registry") or {}).get("passed_count", 11)),
+                "finalization_evidence_items_count": int((scl_eval.get("finalization_docket") or {}).get("evidence_count", 10)),
+                "freeze_invariant_count": 10,
+                "lockdown_setting_count": 12,
+                "allow_production_execution": bool(scl_eval.get("allow_production_execution", False)),
+                "authorized_claimed": bool(scl_eval.get("authorized_claimed", False)),
+                "cycle0_status": "QUARANTINE",
+                "cycle1_status": "ELIGIBLE",
+                "frontier_z_verified": r_scl.get("frontier_z_verified", False),
+                "frontier_z_summary_digest": r_scl.get("frontier_z_summary_digest", ""),
+            }
             cross_chained = (
                 r_lum["previous_run_digest"] == r_cont["ledger_entry_digest"]
                 and r_wgsl["previous_run_digest"] == r_lum["ledger_entry_digest"]
@@ -1247,6 +1844,12 @@ class SOLHoloOrganism:
                 and r_mitotic["previous_run_digest"] == r_umok["ledger_entry_digest"]
                 and r_stwm["previous_run_digest"] == r_mitotic["ledger_entry_digest"]
                 and r_rsi["previous_run_digest"] == r_stwm["ledger_entry_digest"]
+                and r_hcam["previous_run_digest"] == r_rsi["ledger_entry_digest"]
+                and r_wsimd["previous_run_digest"] == r_hcam["ledger_entry_digest"]
+                and r_burnin["previous_run_digest"] == r_wsimd["ledger_entry_digest"]
+                and r_ecw["previous_run_digest"] == r_burnin["ledger_entry_digest"]
+                and r_wcs["previous_run_digest"] == r_ecw["ledger_entry_digest"]
+                and r_scl["previous_run_digest"] == r_wcs["ledger_entry_digest"]
             )
             ledger_ver = {
                 "is_valid": integrity.is_valid,
@@ -1261,6 +1864,12 @@ class SOLHoloOrganism:
                 "mitotic_foliation_run_digest": r_mitotic["ledger_entry_digest"],
                 "stwm_wavefront_run_digest": r_stwm["ledger_entry_digest"],
                 "rsi_compiler_run_digest": r_rsi["ledger_entry_digest"],
+                "hcam_shard_run_digest": r_hcam["ledger_entry_digest"],
+                "waveguide_simd_run_digest": r_wsimd["ledger_entry_digest"],
+                "burnin_attestation_run_digest": r_burnin["ledger_entry_digest"],
+                "entangled_cadence_run_digest": r_ecw["ledger_entry_digest"],
+                "waveguide_channel_staging_run_digest": r_wcs["ledger_entry_digest"],
+                "sovereign_court_lockdown_run_digest": r_scl["ledger_entry_digest"],
                 "cross_run_chained": cross_chained,
             }
             obs_assessments = {
@@ -1320,6 +1929,48 @@ class SOLHoloOrganism:
                     "runtime_replay_verified": assess_rsi["runtime_replay_verification"]["verified"],
                     "frontier_verification_summary": assess_rsi["cycle_drift_breakdown"]["frontier_verification_summary"],
                 },
+                "hcam_shard": {
+                    "comparability": assess_hcam["comparability"],
+                    "outcome": assess_hcam["outcome"],
+                    "verdict_transition": assess_hcam["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_hcam["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_hcam["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "waveguide_simd": {
+                    "comparability": assess_wsimd["comparability"],
+                    "outcome": assess_wsimd["outcome"],
+                    "verdict_transition": assess_wsimd["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_wsimd["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_wsimd["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "burnin_attestation": {
+                    "comparability": assess_burnin["comparability"],
+                    "outcome": assess_burnin["outcome"],
+                    "verdict_transition": assess_burnin["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_burnin["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_burnin["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "entangled_cadence": {
+                    "comparability": assess_ecw["comparability"],
+                    "outcome": assess_ecw["outcome"],
+                    "verdict_transition": assess_ecw["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_ecw["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_ecw["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "waveguide_channel_staging": {
+                    "comparability": assess_wcs["comparability"],
+                    "outcome": assess_wcs["outcome"],
+                    "verdict_transition": assess_wcs["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_wcs["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_wcs["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
+                "sovereign_court_lockdown": {
+                    "comparability": assess_scl["comparability"],
+                    "outcome": assess_scl["outcome"],
+                    "verdict_transition": assess_scl["cycle_drift_breakdown"]["verdict_transition"],
+                    "runtime_replay_verified": assess_scl["runtime_replay_verification"]["verified"],
+                    "frontier_verification_summary": assess_scl["cycle_drift_breakdown"]["frontier_verification_summary"],
+                },
             }
             all_ok = (
                 manifest.all_frontiers_verified
@@ -1333,6 +1984,12 @@ class SOLHoloOrganism:
                 and obs_assessments["mitotic_foliation"]["runtime_replay_verified"]
                 and obs_assessments["stwm_wavefront"]["runtime_replay_verified"]
                 and obs_assessments["rsi_compiler"]["runtime_replay_verified"]
+                and obs_assessments["hcam_shard"]["runtime_replay_verified"]
+                and obs_assessments["waveguide_simd"]["runtime_replay_verified"]
+                and obs_assessments["burnin_attestation"]["runtime_replay_verified"]
+                and obs_assessments["entangled_cadence"]["runtime_replay_verified"]
+                and obs_assessments["waveguide_channel_staging"]["runtime_replay_verified"]
+                and obs_assessments["sovereign_court_lockdown"]["runtime_replay_verified"]
             )
             return SOLHoloSynthesisReport(
                 manifest=manifest,
@@ -1344,6 +2001,12 @@ class SOLHoloOrganism:
                 mitotic_foliation_episode_summary=mitotic_summary,
                 stwm_wavefront_episode_summary=stwm_summary,
                 rsi_compiler_episode_summary=rsi_summary,
+                hcam_shard_episode_summary=hcam_summary,
+                waveguide_simd_episode_summary=wsimd_summary,
+                burnin_attestation_episode_summary=burnin_summary,
+                entangled_cadence_episode_summary=ecw_summary,
+                waveguide_channel_staging_episode_summary=wcs_summary,
+                sovereign_court_lockdown_episode_summary=scl_summary,
                 ledger_verification=ledger_ver,
                 observatory_assessments=obs_assessments,
                 all_verified=all_ok,

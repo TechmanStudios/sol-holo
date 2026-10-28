@@ -15,6 +15,11 @@ from .holo_engine import (
     SOLHoloSynthesisReport,
     compute_holographic_merkle_root,
 )
+from .v3_brain_manifest import (
+    V3BrainManifest,
+    V3BrainReflectiveOrchestrator,
+    V3BrainSynthesisReport,
+)
 
 __all__ = [
     "FRONTIER_CATALOG",
@@ -22,7 +27,11 @@ __all__ = [
     "SOLHoloMasterManifest",
     "SOLHoloOrganism",
     "SOLHoloSynthesisReport",
+    "V3BrainManifest",
+    "V3BrainReflectiveOrchestrator",
+    "V3BrainSynthesisReport",
     "compute_holographic_merkle_root",
 ]
 
 __version__ = "1.0.0"
+

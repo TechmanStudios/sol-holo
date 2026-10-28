@@ -15,11 +15,23 @@ from .holo_engine import (
     SOLHoloSynthesisReport,
     compute_holographic_merkle_root,
 )
-from .v3_brain_manifest import (
-    V3BrainManifest,
-    V3BrainReflectiveOrchestrator,
-    V3BrainSynthesisReport,
-)
+
+_V3_EXPORTS = frozenset({
+    "V3BrainManifest",
+    "V3BrainReflectiveOrchestrator",
+    "V3BrainSynthesisReport",
+})
+
+
+def __getattr__(name):
+    """Load workspace-dependent V3 APIs only when explicitly requested."""
+    if name in _V3_EXPORTS:
+        from importlib import import_module
+
+        value = getattr(import_module(".v3_brain_manifest", __name__), name)
+        globals()[name] = value
+        return value
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
 __all__ = [
     "FRONTIER_CATALOG",

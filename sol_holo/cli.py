@@ -16,7 +16,6 @@ from pathlib import Path
 import sys
 
 from .holo_engine import SOLHoloOrganism
-from .v3_brain_manifest import V3BrainReflectiveOrchestrator
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -105,6 +104,18 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if report.all_verified else 1
 
     if args.command in ("v3-brain", "v3-brain-manifest", "build-v3-brain-manifest", "reflective-domain"):
+        try:
+            from .v3_brain_manifest import V3BrainReflectiveOrchestrator
+        except ModuleNotFoundError as exc:
+            if (exc.name or "").split(".")[0] not in {
+                "sol_continuum", "sol_decide", "sol_edge", "observatory",
+            }:
+                raise
+            parser.error(
+                "v3-brain requires the sol-systems workspace dependencies; "
+                "run it from an initialized sol-systems checkout"
+            )
+
         orch = V3BrainReflectiveOrchestrator(
             model=args.model,
             thinking_level=args.thinking_level,

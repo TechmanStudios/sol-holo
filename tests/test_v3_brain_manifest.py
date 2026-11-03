@@ -126,10 +126,13 @@ class _DummyGenAIClient:
         self.interactions = _DummyInteractionsAPI()
 
 
-def test_sol_llm_gemini4_argon_config_and_interactions_client(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_sol_llm_gemini4_argon_config_and_interactions_client(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
     """Verify sol-llm models.json, config.py, and client.py gemini-4-argon Interactions API support."""
     llm_config_mod = _load_tool_module("sol_llm_config_test", "sol/tools/sol-llm/config.py")
     llm_client_mod = _load_tool_module("sol_llm_client_test", "sol/tools/sol-llm/client.py")
+    monkeypatch.setattr(llm_client_mod, "_COST_LEDGER", tmp_path / "llm_cost_ledger.jsonl")
 
     cfg = llm_config_mod.load_config()
     assert cfg["providers"]["google"]["sdk"] == "google-genai"
